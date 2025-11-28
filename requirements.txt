@@ -2,11 +2,8 @@
 jupyterlite-core==0.1.0b19
 # the Python kernel powered by Pyodide
 jupyterlite-pyodide-kernel==0.0.5
-# widgets support in JupyterLite (ipywidgets in Lite)
-jupyterlite-jupyter-widgets==0.1.7
 # dependency for indexing the content
 jupyterlab~=3.5.3
-
 # dependency for rendering notebooks
 nbconvert~=6.5.4
 # dependency for handling notebooks

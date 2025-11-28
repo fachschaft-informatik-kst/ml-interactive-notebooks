@@ -1,37 +1,35 @@
-# JupyterLite Demo
+# Interactive ML Notebooks for School
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/demo)
+This repository contains interactive Jupyter notebooks used to teach machine learning concepts in a school setting. It focuses on approachable, visual explanations and hands‑on widgets for exploration.
 
-JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+We use a JupyterLite template only as a lightweight scaffold to host notebooks in the browser. The emphasis here is on the teaching materials, not on JupyterLite itself. See dokumentation at <https://jupyterlite.readthedocs.io/> for more about JupyterLite.
 
-## ✨ Try it in your browser ✨
+## Contents
 
-➡️ **https://jupyterlite.github.io/demo**
+- `content/lineare_regression.ipynb`: Einführung in lineare Regression mit interaktiven Slidern.
+- `content/lernarten.ipynb`: Supervised, Unsupervised und Reinforcement Learning – kompakt und interaktiv.
+- `content/klassifikation_ziffern.ipynb`: Klassifikation von handgeschriebenen Ziffern mit Visualisierungen.
 
-![github-pages](https://user-images.githubusercontent.com/591645/120649478-18258400-c47d-11eb-80e5-185e52ff2702.gif)
+## Run Locally
 
-## Requirements
+1. Install dependencies:
 
-JupyterLite is being tested against modern web browsers:
+```shell
+pip install -r requirements.txt
+```
 
-- Firefox 90+
-- Chromium 89+
+2. Start Jupyter (Notebook or Lab):
 
-## Deploy your JupyterLite website on GitHub Pages
+```shell
+jupyter notebook
+# or
+jupyter lab
+```
 
-Check out the guide on the JupyterLite documentation: https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html
+Then open the notebooks in the `content/` folder.
 
-## Further Information and Updates
+## Notes
 
-For more info, keep an eye on the JupyterLite documentation:
-
-- How-to Guides: https://jupyterlite.readthedocs.io/en/latest/howto/index.html
-- Reference: https://jupyterlite.readthedocs.io/en/latest/reference/index.html
-
-This template provides the Pyodide kernel (`jupyterlite-pyodide-kernel`), the JavaScript kernel (`jupyterlite-javascript-kernel`), and the p5 kernel (`jupyterlite-p5-kernel`), along with other
-optional utilities and extensions to make the JupyterLite experience more enjoyable. See the
-[`requirements.txt` file](requirements.txt) for a list of all the dependencies provided.
-
-For a template based on the Xeus kernel, see the [`jupyterlite/xeus-python-demo` repository](https://github.com/jupyterlite/xeus-python-demo)
-
-
+- The project structure and basic config are derived from a JupyterLite template to enable easy in‑browser use if desired.
+- Teaching goal: provide clear, interactive materials for ML basics (regression, clustering, simple RL) suitable for classroom exploration.
+- Notebooks are designed to be self-contained and easy to follow for students with minimal prior experience in machine learning.

@@ -4,9 +4,15 @@ This repository contains interactive Jupyter notebooks used to teach machine lea
 
 We use a JupyterLite template only as a lightweight scaffold to host notebooks in the browser. The emphasis here is on the teaching materials, not on JupyterLite itself. See dokumentation at <https://jupyterlite.readthedocs.io/> for more about JupyterLite.
 
+Noteooks are accessible both locally (with a standard Jupyter installation) and in the browser via JupyterLite Github Pages at: <https://fachschaft-informatik-kst.github.io/ml-interactive-notebooks>
+
+The advantage of the browser version is that no local setup is required. However, some interactive features may be limited compared to a full local installation. The ultimate advantage with jupiterlite is that students can explore the notebooks directly in the browser without installing anything. Everything runs client-side and no server is needed. In every case, the notebooks are designed to be self-contained and easy to follow.
+
+
 ## Contents
 
 - `content/lineare_regression.ipynb`: Einführung in lineare Regression mit interaktiven Slidern.
+- `content/logistic_regression.ipynb`: Logistische Regression zur Klassifikation mit interaktiven Grafiken.
 - `content/lernarten.ipynb`: Supervised, Unsupervised und Reinforcement Learning – kompakt und interaktiv.
 - `content/klassifikation_ziffern.ipynb`: Klassifikation von handgeschriebenen Ziffern mit Visualisierungen.
 

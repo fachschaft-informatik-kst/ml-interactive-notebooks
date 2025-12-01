@@ -21,11 +21,11 @@ requests~=2.31.0
 # dependency for handling paths
 pathlib~=1.0.1
 # dependency for handling dataframes
-pandas~=2.0.3
+pandas~=2.1.0
 # dependency for handling arrays
-numpy~=1.24.4
+numpy~=1.26.0   
 # dependency for handling scientific computations
-scipy~=1.10.1
+scipy~=1.11.0
 # dependency for handling visualizations
 matplotlib~=3.7.1
 # dependency for handling interactive visualizations
@@ -39,4 +39,4 @@ scikit-learn~=1.2.2
 # dependency for handling natural language processing
 nltk~=3.8.1
 # dependency for handling image processing
-Pillow~=9.4.0
+Pillow>=10.1.0,<11

@@ -12,6 +12,14 @@ We use a JupyterLite template only as a lightweight scaffold to host notebooks i
 
 ## Run Locally
 
+Prerequisite: Python 3.12
+
+- Check your version:
+
+```shell
+python --version
+```
+
 1. Install dependencies:
 
 ```shell

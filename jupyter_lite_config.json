@@ -1,0 +1,10 @@
+{
+  "PyodideLockAddon": {
+    "enabled": true,
+    "specs": ["ipywidgets ==8.1.0"],
+    "extra_preload_packages": ["ipywidgets"]
+  },
+  "PyodideLockOfflineAddon": {
+    "enabled": true
+  }
+}

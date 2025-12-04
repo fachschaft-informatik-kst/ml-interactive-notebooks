@@ -1,42 +1,47 @@
 # core package for building the JupyterLite website
-jupyterlite-core==0.1.0b19
+jupyterlite-core==0.5.0
 # the Python kernel powered by Pyodide
-jupyterlite-pyodide-kernel==0.0.5
+jupyterlite-pyodide-kernel==0.5.0
+# lockfile for managing Pyodide packages
+jupyterlite-pyodide-lock>=0.1.1
 # dependency for indexing the content
-jupyterlab~=3.5.3
+jupyterlab~=4.3.0
 # dependency for rendering notebooks
-nbconvert~=6.5.4
+nbconvert~=7.5.0
 # dependency for handling notebooks
-nbformat~=5.7.3
+nbformat~=5.9.0
 # dependency for handling markdown files
-markdown-it-py~=2.2.0
+markdown-it-py~=3.0.0
 # dependency for handling code files
-pygments~=2.15.1
+pygments~=2.16.1
 # dependency for handling YAML files
 pyyaml~=6.0
 # dependency for handling JSON files
-jsonschema~=4.17.3
+jsonschema~=4.19.0
 # dependency for handling URLs
 requests~=2.31.0
 # dependency for handling paths
 pathlib~=1.0.1
 # dependency for handling dataframes
-pandas~=2.1.0
+pandas~=2.2.0
 # dependency for handling arrays
-numpy~=1.26.0   
+numpy~=1.26.4
 # dependency for handling scientific computations
-scipy~=1.11.0
+scipy~=1.11.3
 # dependency for handling visualizations
-matplotlib~=3.7.1
+matplotlib~=3.8.0
 # dependency for handling interactive visualizations
-plotly~=5.14.1
-# dependency for handling widgets
-ipywidgets~=8.0.6
+plotly~=5.16.0
+# dependency for handling widgets (Python-Seite)
+ipywidgets~=8.1.0
+# JupyterLab-Extension für ipywidgets (Frontend-Seite)
+jupyterlab_widgets>=3.0.11,<4
 # dependency for handling data visualization in notebooks
 seaborn~=0.13.2
 # dependency for handling machine learning
-scikit-learn~=1.2.2
+scikit-learn~=1.3.2
 # dependency for handling natural language processing
 nltk~=3.8.1
 # dependency for handling image processing
-Pillow>=10.1.0,<11
+Pillow>=10.1.0,<11.0.0
+# dependency for handling web scraping

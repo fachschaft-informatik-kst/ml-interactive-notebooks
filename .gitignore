@@ -5,6 +5,7 @@ node_modules/
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
+/worksheets/*.pdf
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
@@ -116,3 +117,5 @@ dmypy.json
 _output
 
 .venv/
+
+.workspace/*.pdf

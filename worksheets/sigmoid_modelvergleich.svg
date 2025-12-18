@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-label="Sigmoid-Kurven der Modelle A und B mit Datenpunkten">
+  <style>
+    .axis { stroke: #222; stroke-width: 1; }
+    .grid { stroke: #ccc; stroke-width: 0.5; stroke-dasharray: 3 3; }
+    .label { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
+    .legend { font-family: Arial, sans-serif; font-size: 12px; fill: #222; }
+  </style>
+  <rect x="0" y="0" width="640" height="400" fill="white" />
+
+  <!-- Grid and axes -->
+  <g>
+    <!-- horizontal grid and labels for p -->
+    <!-- y ticks every 0.1 -->
+    <line class="grid" x1="60" y1="30" x2="580" y2="30" />
+    <text class="label" x="54" y="34" text-anchor="end">1.0</text>
+    <line class="grid" x1="60" y1="60" x2="580" y2="60" />
+    <text class="label" x="54" y="64" text-anchor="end">0.9</text>
+    <line class="grid" x1="60" y1="90" x2="580" y2="90" />
+    <text class="label" x="54" y="94" text-anchor="end">0.8</text>
+    <line class="grid" x1="60" y1="120" x2="580" y2="120" />
+    <text class="label" x="54" y="124" text-anchor="end">0.7</text>
+    <line class="grid" x1="60" y1="150" x2="580" y2="150" />
+    <text class="label" x="54" y="154" text-anchor="end">0.6</text>
+    <line class="grid" x1="60" y1="180" x2="580" y2="180" />
+    <text class="label" x="54" y="184" text-anchor="end">0.5</text>
+    <line class="grid" x1="60" y1="210" x2="580" y2="210" />
+    <text class="label" x="54" y="214" text-anchor="end">0.4</text>
+    <line class="grid" x1="60" y1="240" x2="580" y2="240" />
+    <text class="label" x="54" y="244" text-anchor="end">0.3</text>
+    <line class="grid" x1="60" y1="270" x2="580" y2="270" />
+    <text class="label" x="54" y="274" text-anchor="end">0.2</text>
+    <line class="grid" x1="60" y1="300" x2="580" y2="300" />
+    <text class="label" x="54" y="304" text-anchor="end">0.1</text>
+    <line class="grid" x1="60" y1="330" x2="580" y2="330" />
+    <text class="label" x="54" y="334" text-anchor="end">0.0</text>
+
+    <!-- vertical grid and labels for x -->
+    <line class="grid" x1="60" y1="30" x2="60" y2="330" />
+    <text class="label" x="60" y="350" text-anchor="middle">-8</text>
+    <line class="grid" x1="125.0" y1="30" x2="125.0" y2="330" />
+    <text class="label" x="125.0" y="350" text-anchor="middle">-6</text>
+    <line class="grid" x1="190.0" y1="30" x2="190.0" y2="330" />
+    <text class="label" x="190.0" y="350" text-anchor="middle">-4</text>
+    <line class="grid" x1="255.0" y1="30" x2="255.0" y2="330" />
+    <text class="label" x="255.0" y="350" text-anchor="middle">-2</text>
+    <line class="grid" x1="320.0" y1="30" x2="320.0" y2="330" />
+    <text class="label" x="320.0" y="350" text-anchor="middle">0</text>
+    <line class="grid" x1="385.0" y1="30" x2="385.0" y2="330" />
+    <text class="label" x="385.0" y="350" text-anchor="middle">2</text>
+    <line class="grid" x1="450.0" y1="30" x2="450.0" y2="330" />
+    <text class="label" x="450.0" y="350" text-anchor="middle">4</text>
+    <line class="grid" x1="515.0" y1="30" x2="515.0" y2="330" />
+    <text class="label" x="515.0" y="350" text-anchor="middle">6</text>
+    <line class="grid" x1="580.0" y1="30" x2="580.0" y2="330" />
+    <text class="label" x="580.0" y="350" text-anchor="middle">8</text>
+  </g>
+
+  <line class="axis" x1="60" y1="330" x2="580" y2="330" />
+  <line class="axis" x1="60" y1="330" x2="60" y2="30" />
+  <text class="label" x="320" y="370" text-anchor="middle">x</text>
+  <text class="label" x="18" y="180" text-anchor="middle" transform="rotate(-90 18 180)">p</text>
+
+  <!-- decision threshold p=0.5 -->
+  <line x1="60" y1="180" x2="580" y2="180" stroke="#d33" stroke-width="1" stroke-dasharray="4 3" />
+
+  <!-- Model A: sigma(1.0x - 1.8), sampled x=-8..8 in 0.5er Schritten (richtige S-Form) -->
+  <polyline fill="none" stroke="#2a7de1" stroke-width="2"
+    points="60.0,330.0 76.2,330.0 92.5,330.0 108.8,329.9 125.0,329.9 141.2,329.8 157.5,329.7 173.8,329.5 190.0,329.1 206.2,328.5 222.5,327.6 238.8,326.0 255.0,323.4 271.2,319.3 287.5,312.8 303.8,302.7 320.0,287.4 336.2,265.8 352.5,237.0 368.8,202.3 385.0,165.0 401.2,129.5 417.5,99.4 433.8,76.3 450.0,59.9 466.2,48.9 482.5,41.7 498.8,37.2 515.0,34.4 531.2,32.7 547.5,31.6 563.8,31.0 580.0,30.6" />
+
+  <!-- Model B: sigma(2.0x - 4.2), sampled x=-8..8 in 0.5er Schritten (steilere S-Form) -->
+  <polyline fill="none" stroke="#e14d2a" stroke-width="2"
+    points="60.0,330.0 76.2,330.0 92.5,330.0 108.8,330.0 125.0,330.0 141.2,330.0 157.5,330.0 173.8,330.0 190.0,330.0 206.2,330.0 222.5,330.0 238.8,330.0 255.0,329.9 271.2,329.8 287.5,329.4 303.8,328.4 320.0,325.6 336.2,318.3 352.5,300.1 368.8,260.6 385.0,195.0 401.2,123.0 417.5,72.6 433.8,47.2 450.0,36.6 466.2,32.4 482.5,30.9 498.8,30.3 515.0,30.1 531.2,30.0 547.5,30.0 563.8,30.0 580.0,30.0" />
+
+  <!-- Data points -->
+  <g>
+    <circle cx="336.3" cy="330" r="4" fill="#7b8794" />
+    <circle cx="352.5" cy="330" r="4" fill="#7b8794" />
+    <circle cx="368.8" cy="330" r="4" fill="#7b8794" />
+    <circle cx="385.0" cy="330" r="4" fill="#7b8794" />
+    <circle cx="401.3" cy="30" r="4" fill="#2a9d8f" />
+    <circle cx="417.5" cy="30" r="4" fill="#2a9d8f" />
+  </g>
+
+  <!-- Legend -->
+  <rect x="70" y="40" width="240" height="135" fill="white" stroke="#ccc" />
+  <line x1="85" y1="60" x2="115" y2="60" stroke="#2a7de1" stroke-width="2" />
+  <text class="legend" x="125" y="64">Modell A: p = σ(1.0x - 1.8)</text>
+  <line x1="85" y1="80" x2="115" y2="80" stroke="#e14d2a" stroke-width="2" />
+  <text class="legend" x="125" y="84">Modell B: p = σ(2.0x - 4.2)</text>
+  <line x1="85" y1="100" x2="115" y2="100" stroke="#d33" stroke-width="1" stroke-dasharray="4 3" />
+  <text class="legend" x="125" y="104">Schwelle p = 0.5</text>
+  <circle cx="100" cy="120" r="4" fill="#7b8794" />
+  <text class="legend" x="125" y="124">Datenpunkt: nicht bestanden</text>
+  <circle cx="100" cy="140" r="4" fill="#2a9d8f" />
+  <text class="legend" x="125" y="144">Datenpunkt: bestanden</text>
+</svg>

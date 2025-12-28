@@ -5,8 +5,6 @@ author: "Informatik"
 geometry: margin=2.3cm
 ---
 
-# Einleitung
-
 ## 1. Lernziel
 
 Ich kann
@@ -67,7 +65,7 @@ $$
 2. Zeichne die Gerade $\hat{y} = 10x + 30$.
 3. Markiere bei **mindestens zwei Punkten** den vertikalen Abstand zur Geraden (das ist der Fehler $y-\hat{y}$).
 
-![Koordinatengitter zum Einzeichnen](koordinatengitter_lineare_regression.svg)
+![Koordinatengitter zum Einzeichnen](svg/koordinatengitter_lineare_regression.svg)
 
 ## Aufgabe 1b: MSE berechnen (von Hand)
 
@@ -111,7 +109,7 @@ Gegeben sind dieselben Datenpunkte:
 2. Zeichne **beide** Geraden (A und B) ins gleiche Koordinatensystem.
 3. Entscheide **visuell**, welche Gerade besser passt (kurz begründen).
 
-![Koordinatengitter zum Einzeichnen](koordinatengitter_0-10_0-80.svg)
+![Koordinatengitter zum Einzeichnen](svg/koordinatengitter_lineare_regression.svg)
 
 \newpage
 
@@ -147,6 +145,6 @@ Gegeben sind dieselben Datenpunkte:
 
 ## Aufgabe 2d: Interpretation (2–4 Sätze)
 
-- Welches Modell hat den **kleineren MSE**?
-- Passt das zu deinem **grafischen Eindruck**? Warum?
+1. Welches Modell hat den **kleineren MSE**?
+2. Passt das zu deinem **grafischen Eindruck**? Warum?
 

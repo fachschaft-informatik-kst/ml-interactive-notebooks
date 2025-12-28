@@ -5,35 +5,66 @@ author: "Informatik"
 geometry: margin=2.3cm
 ---
 
-# Einleitung
-
 ## 1. Lernziel
 Ich kann
 
 - den Zweck der logistischen Regression erklären (Ja/Nein-Vorhersage)
 - die Sigmoid-Funktion anwenden, um eine Wahrscheinlichkeit zu berechnen
-- Klassen vorhersagen und einfache Metriken (Accuracy) interpretieren
+- Kategorien vorhersagen und einfache Metriken (Accuracy) interpretieren
 
 ## 2. Was macht die logistische Regression?
-- Sie berechnet aus den Eingaben einen **Rohscore** $z$ (eine Zahl kann negativ, null oder positiv sein), oft mit einer einfachen linearen Formel, z. B. $z = a\,x + b$.
-- Erst mit der **Sigmoid-Funktion** wird daraus eine Wahrscheinlichkeit $p \in (0,1)$:
+
+Die Logistische Regression wird für **binäre Klassifikationsaufgaben** genutzt, also wenn die Antwort nur zwei Werte annehmen kann, z.B.: Ja/Nein, 0/1, Wahr/Falsch.
+
+Analog zur linearen Regression wird auch hier eine Gerade berechnet, aber das Ergebnis wird **in eine Wahrscheinlichkeit umgewandelt** (z.B. die Wahrscheinlichkeit, ob ein:e Schüler:in den Test besteht oder nicht). Somit sagt die logistische Regression **keine direkten Kategorien** vorher, sondern **Wahrscheinlichkeiten** für die Kategorien.
+
+Bedeutung der Wahrscheinlichkeit $p$:
+
+- Beispiel: $p=0.8$ bedeutet, dass das Modell zu 80% sicher ist, dass die Kategorie 1 (z.B. „bestanden“) zutrifft.
+- Beispiel: $p=0.3$ bedeutet, dass das Modell zu 70% sicher ist, dass die Kategorie 0 (z.B. „nicht bestanden“) zutrifft.
+
+Nach Berechnung der Wahrscheinlichkeit wird eine **Schwelle** (z.B. 0.5) genutzt, um die Wahrscheinlichkeit in eine konkrete Kategorie umzuwandeln.
+
+### 2.1 Ablauf in drei Schritten
+1) Rechne eine **Gerade**: $z = a\,x + b$.
+2) Setze $z$ in die **Sigmoid-Funktion** $\sigma(z)$ ein und erhalte eine Wahrscheinlichkeit $p \in (0,1)$.
+3) Setze eine **Schwelle** (oft 0.5), um aus $p$ eine Kategorie zu machen.
 
 $$
 \sigma(z) = \frac{1}{1 + e^{-z}}
 $$
 
-- **Entscheidungsgrenze:** $p = 0.5$ entspricht $z = 0$; mit mehreren Features ist das eine Linie/Ebene zwischen den Klassen.
+Anmerkungen:
+
+- **Entscheidungsgrenze:** $p = 0.5$ entspricht $z = 0$.
 - **Typische Regel:** $\hat{y}=1$ falls $p \ge 0.5$, sonst $\hat{y}=0$.
 - **Schwelle anpassbar:** Höhere Schwelle = strenger, niedrigere Schwelle = grosszügiger.
 
+\newpage
+
 ## 3. Mini-Übung: Sigmoid skizzieren
 - Zeichne die Kurve von $\sigma(z)$ für $z \in [-6,6]$ in das Gitter unten.
-- Markiere diese Punkte (gerundet):
-	- $(-6, \approx0.002)$, $(-4, \approx0.018)$, $(-3, \approx0.047)$, $(-2, \approx0.119)$, $(-1, \approx0.269)$
-	- $(0, 0.5)$, $(1, \approx0.731)$, $(2, \approx0.881)$, $(3, \approx0.953)$, $(4, \approx0.982)$, $(6, \approx0.998)$
+- Berechne selbst die gerundeten Werte $\sigma(z)$ für die ganzzahligen Punkte $z=-6,\ldots,6$ und trage sie in die Tabelle ein.
+
+| $z$ | $\sigma(z)$ |
+|---:|---:|
+| -6 |  |
+| -5 |  |
+| -4 |  |
+| -3 |  |
+| -2 |  |
+| -1 |  |
+| 0  |  |
+| 1  |  |
+| 2  |  |
+| 3  |  |
+| 4  |  |
+| 5  |  |
+| 6  |  |
+
 - Zeige, dass die Kurve bei $0.5$ „umkippt“ und sich bei 0 bzw. 1 asymptotisch annähert.
 
-![Koordinatengitter (nutzen für Sigmoid)](koordinatengitter_sigmoid.svg)
+![Koordinatengitter (nutzen für Sigmoid)](svg/koordinatengitter_sigmoid.svg)
 
 \clearpage
 
@@ -45,7 +76,7 @@ $$
 p = \sigma(1.2\,x - 2.0)
 $$
 
-*Interpretation:* $x$ = Lernzeit in Stunden, $p$ = Wahrscheinlichkeit, den Test zu bestehen (Klasse 1).
+*Interpretation:* $x$ = Lernzeit in Stunden, $p$ = Wahrscheinlichkeit, den Test zu bestehen (Kategorie 1).
 
 ## Datenpunkte
 
@@ -87,7 +118,7 @@ Gleiche Datenpunkte wie oben.
 - **Modell A:** $p_A = \sigma(1.0\,x - 1.8)$
 - **Modell B:** $p_B = \sigma(1.4\,x - 2.9)$
 
-## Aufgabe 2a: Wahrscheinlichkeiten & Klassen
+## Aufgabe 2a: Wahrscheinlichkeiten & Kategorien
 Berechne für beide Modelle $p$ und $\hat{y}$ (Schwelle 0.5) und fülle die Tabellen.
 
 **Modell A**
@@ -125,11 +156,11 @@ Berechne für beide Modelle $p$ und $\hat{y}$ (Schwelle 0.5) und fülle die Tabe
 \vspace{1cm}
 
 ## Aufgabe 2c: Kurze Interpretation (2–4 Sätze)
-- Welches Modell würdest du wählen und warum?
-- Wie könnte man die Schwelle 0.5 verändern, um mehr/ weniger False Positives zu bekommen?
+1. Welches Modell würdest du wählen und warum?
+2. Wie könnte man die Schwelle 0.5 verändern, um mehr/ weniger falsch kategorisierte Zuordnungen zu bekommen?
 
 \newpage
 
 # Reflexion
-- In welchen Situationen ist die logistische Regression besser geeignet als die lineare Regression?
-- Warum sind Wahrscheinlichkeiten hilfreicher als nur harte 0/1-Entscheidungen?
+1. In welchen Situationen ist die logistische Regression besser geeignet als die lineare Regression?
+2. Warum sind Wahrscheinlichkeiten hilfreicher als nur harte 0/1-Entscheidungen?

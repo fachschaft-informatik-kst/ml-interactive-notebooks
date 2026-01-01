@@ -1,5 +1,7 @@
 # Worksheets – PDFs erzeugen
 
+In diesem Ordnen sind Arbeitsblätter zu verschiedenen Themen der Künstlichen Intelligenz in Markdown-Format (`.md`) abgelegt. Diese können mit [Pandoc](https://pandoc.org/) in PDF-Dateien umgewandelt werden. Die erstellten Grafiken für die Arbeitsblätter sind im Unterordner `svg` bzw. `resources` gespeichert.
+
 ## Schnellstart (im Ordner `worksheets`)
 ```bash
 cd worksheets

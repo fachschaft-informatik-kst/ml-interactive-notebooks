@@ -158,10 +158,10 @@ Führe einen Durchlauf über die vier Beispiele durch.
 | 1 | 0 |  |  |  |
 | 1 | 1 |  |  |  |
 
-## Aufgabe 3b: Gewichte zweimal aktualisieren
-- Führe **zwei** Lernschritte nacheinander aus.
+## Aufgabe 3b: Gewichte aktualisieren
+- Führe die Lernschritte nacheinander aus bis keine Fehler mehr auftreten.
     1. Nimm das **erste** falsch klassifizierte Beispiel aus 3a und aktualisiere alle aktiven Gewichte ($x_i = 1$) sowie den Bias $w_0$.
-    2. Überprüfe die verbliebenen Beispiele mit den **neuen** Gewichten und wähle erneut das erste falsch klassifizierte Beispiel für einen **zweiten** Update-Schritt.
+    2. Überprüfe die verbliebenen Beispiele mit den **neuen** Gewichten und wähle erneut das erste falsch klassifizierte Beispiel für einen **weiteren** Update-Schritt.
 - In beiden Schritten gilt die Lernregel:
 
 $$
@@ -178,6 +178,17 @@ Trage nach jedem Schritt die Werte ein (Schritt 2 startet mit den neuen Gewichte
 | $w_1$ |  |  |  |
 | $w_2$ |  |  |  |
 
+Überprüfe erneut alle Beispiele mit den neuen Gewichten und finde das erste falsche Beispiel:
+
+| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|---:|
+| 0 | 0 |  |  |  |
+| 0 | 1 |  |  |  |
+| 1 | 0 |  |  |  |
+| 1 | 1 |  |  |  |
+
+\newpage
+
 **Update 2**
 
 | Gewicht | Alter Wert | $y-\hat{y}$ | Neues $w$ |
@@ -185,6 +196,15 @@ Trage nach jedem Schritt die Werte ein (Schritt 2 startet mit den neuen Gewichte
 | $w_0$ |  |  |  |
 | $w_1$ |  |  |  |
 | $w_2$ |  |  |  |
+
+Überprüfe erneut alle Beispiele mit den neuen Gewichten und finde das erste falsche Beispiel:
+
+| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|---:|
+| 0 | 0 |  |  |  |
+| 0 | 1 |  |  |  |
+| 1 | 0 |  |  |  |
+| 1 | 1 |  |  |  |
 
 ## Aufgabe 3c: Visualisierung
 1) Färbe die Punkte nach der NAND-Wahrheitstafel: $y=1$ grün, $y=0$ rot.  

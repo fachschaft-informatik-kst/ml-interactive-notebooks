@@ -132,7 +132,7 @@ Verwende folgende Startwerte für das Perzeptron:
 - Lernrate $\eta = 0.2$
 
 **Perzeptron-Lernregel:**
-Die Lernrate gibt an, wie stark die Gewichte bei einem Fehler angepasst werden. In diesem Fall bedeutet $\eta = 0.2$, dass die Gewichte um 20 % des Fehlers korrigiert werden. Korrigieren bedeutet hier, dass die Gewichte in Richtung des Fehlers angepasst werden, um die Vorhersage des Perzeptrons zu verbessern. Eine zu hohe Lernrate kann jedoch dazu führen, dass das Modell über das Optimum hinausschießt und nicht konvergiert, während eine zu niedrige Lernrate den Lernprozess verlangsamen kann. Konvergieren bedeutet in diesem Kontext, dass das Perzeptron lernt, die Trainingsdaten korrekt zu klassifizieren, sodass keine weiteren Gewichtsanpassungen mehr notwendig sind.
+Die Lernrate gibt an, wie stark die Gewichte bei einem Fehler angepasst werden. In diesem Fall bedeutet $\eta = 0.2$, dass die Gewichte um 20 % des Fehlers korrigiert werden. Korrigieren bedeutet hier, dass die Gewichte in Richtung des Fehlers angepasst werden, um die Vorhersage des Perzeptrons zu verbessern. Eine zu hohe Lernrate kann jedoch dazu führen, dass das Modell über das Optimum hinausschiesst und nicht konvergiert, während eine zu niedrige Lernrate den Lernprozess verlangsamen kann. Konvergieren bedeutet in diesem Kontext, dass das Perzeptron lernt, die Trainingsdaten korrekt zu klassifizieren, sodass keine weiteren Gewichtsanpassungen mehr notwendig sind.
 
 Nutze das Flussdiagramm als Leitfaden, um zu verstehen, wie die Gewichte im Perzeptron angepasst werden. Nachfolgend ist die Perzeptron-Lernregel als vereinfachte Schritt-für-Schritt-Anleitung:
 

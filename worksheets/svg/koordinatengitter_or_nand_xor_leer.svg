@@ -9,7 +9,7 @@
   <line x1="120" y1="420" x2="660" y2="420" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="120" y1="420" x2="120" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
 
-  <!-- Grid -->
+  <!-- Grid (0/1 square) -->
   <g stroke="#bbb" stroke-dasharray="6 6" stroke-width="1.5">
     <line x1="120" y1="420" x2="620" y2="420" />
     <line x1="120" y1="120" x2="620" y2="120" />
@@ -17,25 +17,13 @@
     <line x1="620" y1="420" x2="620" y2="120" />
   </g>
 
-  <!-- Axis ticks -->
-  <g fill="#333" stroke="#333" stroke-width="2" font-size="16">
-    <line x1="120" y1="420" x2="120" y2="430" />
-    <line x1="620" y1="420" x2="620" y2="430" />
-    <line x1="110" y1="420" x2="120" y2="420" />
-    <line x1="110" y1="120" x2="120" y2="120" />
-  </g>
-
-  <!-- Points with class colors (XOR) -->
+  <!-- Points (XOR) -->
   <g stroke="#555" stroke-width="2">
-    <circle cx="120" cy="420" r="12" fill="#d33" />
-    <circle cx="120" cy="120" r="12" fill="#2e8b57" />
-    <circle cx="620" cy="420" r="12" fill="#2e8b57" />
-    <circle cx="620" cy="120" r="12" fill="#d33" />
+    <circle cx="120" cy="420" r="12" fill="#d33" /> <!-- (0,0) XOR=0 -->
+    <circle cx="120" cy="120" r="12" fill="#2e8b57" /> <!-- (0,1) XOR=1 -->
+    <circle cx="620" cy="420" r="12" fill="#2e8b57" /> <!-- (1,0) XOR=1 -->
+    <circle cx="620" cy="120" r="12" fill="#d33" /> <!-- (1,1) XOR=0 -->
   </g>
-
-  <!-- Two separating lines to illustrate Nicht-Linearität (unbeschriftet) -->
-  <line x1="370" y1="420" x2="120" y2="270" stroke="#1e73be" stroke-width="3" />
-  <line x1="620" y1="420" x2="120" y2="120" stroke="#1e73be" stroke-width="3" />
 
   <!-- Point labels -->
   <g fill="#555" font-size="14">

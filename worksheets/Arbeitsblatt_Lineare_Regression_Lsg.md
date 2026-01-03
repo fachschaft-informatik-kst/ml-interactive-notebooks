@@ -3,6 +3,9 @@ title: "Arbeitsblatt: Mean Squared Error (MSE) - Lösung"
 subtitle: "Lineare Regression"
 author: "Informatik"
 geometry: margin=2.3cm
+lang: de-DE
+header-includes:
+    - \renewcommand{\figurename}{Abbildung}
 ---
 
 # Beispiel 1: Lernzeit und Testresultat

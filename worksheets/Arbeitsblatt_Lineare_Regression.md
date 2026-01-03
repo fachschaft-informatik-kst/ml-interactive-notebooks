@@ -3,6 +3,9 @@ title: "Arbeitsblatt: Mean Squared Error (MSE)"
 subtitle: "Lineare Regression"
 author: "Informatik"
 geometry: margin=2.3cm
+lang: de-DE
+header-includes:
+  - \renewcommand{\figurename}{Abbildung}
 ---
 
 ## 1. Lernziel

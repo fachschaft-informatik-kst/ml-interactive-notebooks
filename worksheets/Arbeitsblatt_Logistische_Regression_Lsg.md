@@ -3,6 +3,9 @@ title: "Arbeitsblatt: Logistische Regression"
 subtitle: "Binäre Klassifikation mit Wahrscheinlichkeiten - Lösung"
 author: "Informatik"
 geometry: margin=2.3cm
+lang: de-DE
+header-includes:
+	- \renewcommand{\figurename}{Abbildung}
 ---
 
 # Lösung Mini-Übung: Sigmoid skizzieren

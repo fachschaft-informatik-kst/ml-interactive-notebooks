@@ -3,6 +3,9 @@ title: "Arbeitsblatt: Perzeptron"
 subtitle: "Einführung in neuronale Netze mit Step-Funktion - Lösung"
 author: "Informatik"
 geometry: margin=2.3cm
+lang: de-DE
+header-includes:
+	- \renewcommand{\figurename}{Abbildung}
 ---
 
 ## Beispiel 1: AND-Gatter

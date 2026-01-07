@@ -14,6 +14,9 @@ pandoc Arbeitsblatt_Mehrschichtige_Neuronale_Netze.md -o Arbeitsblatt_Mehrschich
 ## Alle auf einmal
 ```bash
 cd worksheets
+./generate_pdfs.sh
+
+# alternativ (ohne Skript):
 for f in Arbeitsblatt_*.md; do
   base="${f%.md}"
   pandoc "$f" -V geometry:margin=2.3cm -o "$base.pdf"

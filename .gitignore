@@ -119,3 +119,4 @@ _output
 .venv/
 
 .workspace/*.pdf
+.worksheets/*.pdf

@@ -135,15 +135,11 @@ header-includes:
 
 - Organisatorisches/Instruktionen (5–10 min)
 
-- Pruefung schreiben (Teil 1) (ca. 35–40 min)
+- Pruefung (ca. 50 min)
 
 > **2. Lektion: Pruefung (Teil 2) + Abschluss**
 
-- Pruefung schreiben (Teil 2) (ca. 35–40 min)
-
-- Abgabe + kurzer Abschluss (5 min)
-
-Wenn nach der Pruefung noch Zeit bleibt (optional):
+- Arbeitsblatt „[Mehrschichtige neuronale Netze](Arbeitsblatt_Mehrschichtige_Neuronale_Netze.md)“ Einstiegsteil bearbeiten (Restzeit, ca. 30 min)
 
 - Kurzer Ausblick „Bilder → CNN-Idee (Filter/Kanten)“ als Teaser (5–10 min)
 

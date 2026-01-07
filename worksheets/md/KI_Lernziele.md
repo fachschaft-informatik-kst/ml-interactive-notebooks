@@ -47,6 +47,7 @@ Ich kann
 - aus Wahrscheinlichkeiten und einer Schwelle Vorhersagen $\hat{y}\in\{0,1\}$ ableiten.
 - die Metrik **Accuracy** berechnen und in einfachen Fällen interpretieren.
 - begründen, wie/warum man die Schwelle verändert und wie sich das auf Vorhersagen/Accuracy auswirken kann (strenger vs. grosszügiger klassifizieren).
+
 ## 5. Perzeptron
 Ich kann
 
@@ -58,7 +59,7 @@ Ich kann
 - die Rolle der **Lernrate** $\eta$ erklären (zu gross/zu klein).
 - erklären, warum XOR mit einem einzelnen Perzeptron nicht lösbar ist (**nicht linear separabel**).
 
-## 6. Mehrschichtige neuronale Netze
+## 6. Mehrschichtige neuronale Netze (nicht mehr Prüfungsstoff)
 Ich kann
 
 - den Aufbau eines mehrschichtigen Netzes erklären (Schichten, Gewichte, Bias, Hidden Layer als Zwischenschritt).

@@ -2,7 +2,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-WORKSHEETS_DIR="$SCRIPT_DIR"
+MD_DIR="$SCRIPT_DIR/md"
+PDF_DIR="$SCRIPT_DIR/pdf"
 
 MARGIN="2.3cm"
 INCLUDE_SOLUTIONS=1
@@ -11,7 +12,7 @@ usage() {
   cat <<'EOF'
 Usage: generate_pdfs.sh [--no-solutions] [--margin <value>]
 
-Generates PDFs for all worksheets (Arbeitsblatt_*.md) in this folder.
+Generates PDFs for all Markdown files in "md/" and writes them to "pdf/".
 
 Options:
   --no-solutions      Skip solution files matching *_Lsg.md
@@ -54,14 +55,21 @@ fi
 
 shopt -s nullglob
 
-mapfile -t files < <(cd -- "$WORKSHEETS_DIR" && printf '%s\n' Arbeitsblatt_*.md)
-
-if [[ ${#files[@]} -eq 0 ]]; then
-  echo "No worksheets found (Arbeitsblatt_*.md) in $WORKSHEETS_DIR" >&2
+if [[ ! -d "$MD_DIR" ]]; then
+  echo "ERROR: Markdown folder not found: $MD_DIR" >&2
   exit 1
 fi
 
-cd -- "$WORKSHEETS_DIR"
+mkdir -p -- "$PDF_DIR"
+
+mapfile -t files < <(cd -- "$MD_DIR" && printf '%s\n' *.md)
+
+if [[ ${#files[@]} -eq 0 ]]; then
+  echo "No markdown files found (*.md) in $MD_DIR" >&2
+  exit 1
+fi
+
+cd -- "$MD_DIR"
 
 count=0
 for f in "${files[@]}"; do
@@ -70,11 +78,11 @@ for f in "${files[@]}"; do
   fi
 
   base="${f%.md}"
-  out="${base}.pdf"
+  out="$PDF_DIR/${base}.pdf"
 
-  echo "pandoc $f -> $out"
+  echo "pandoc md/$f -> pdf/${base}.pdf"
   pandoc "$f" -V "geometry:margin=${MARGIN}" -o "$out"
   count=$((count + 1))
 done
 
-echo "Done. Generated ${count} PDF(s) in $WORKSHEETS_DIR"
+echo "Done. Generated ${count} PDF(s) in $PDF_DIR"

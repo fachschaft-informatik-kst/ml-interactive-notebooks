@@ -15,6 +15,14 @@ The advantage of the browser version is that no local setup is required. However
 - `content/logistic_regression.ipynb`: Logistische Regression zur Klassifikation mit interaktiven Grafiken.
 - `content/lernarten.ipynb`: Supervised, Unsupervised und Reinforcement Learning – kompakt und interaktiv.
 - `content/klassifikation_ziffern.ipynb`: Klassifikation von handgeschriebenen Ziffern mit Visualisierungen.
+- `content/daten_training.ipynb`: Datenaufbereitung und Trainingsprozess mit interaktiven Elementen.
+
+## Worksheets (PDF)
+
+```bash
+cd worksheets
+./generate_pdfs.sh
+```
 
 ## Run Locally
 

@@ -9,11 +9,11 @@ In diesem Ordner liegt die Infrastruktur zum Erzeugen von PDFs via [Pandoc](http
 ## Schnellstart (im Ordner `worksheets`)
 ```bash
 cd worksheets
-pandoc md/Arbeitsblatt_Lineare_Regression.md -o pdf/Arbeitsblatt_Lineare_Regression.pdf
-pandoc md/Arbeitsblatt_Logistische_Regression.md -o pdf/Arbeitsblatt_Logistische_Regression.pdf
-pandoc md/Arbeitsblatt_Perzeptron.md -o pdf/Arbeitsblatt_Perzeptron.pdf
-pandoc md/Arbeitsblatt_Mehrschichtige_Neuronale_Netze.md -o pdf/Arbeitsblatt_Mehrschichtige_Neuronale_Netze.pdf
-pandoc md/KI_Lernziele.md -o pdf/KI_Lernziele.pdf
+pandoc md/Arbeitsblatt_Lineare_Regression.md -H pandoc/header.tex -o pdf/Arbeitsblatt_Lineare_Regression.pdf
+pandoc md/Arbeitsblatt_Logistische_Regression.md -H pandoc/header.tex -o pdf/Arbeitsblatt_Logistische_Regression.pdf
+pandoc md/Arbeitsblatt_Perzeptron.md -H pandoc/header.tex -o pdf/Arbeitsblatt_Perzeptron.pdf
+pandoc md/Arbeitsblatt_Mehrschichtige_Neuronale_Netze.md -H pandoc/header.tex -o pdf/Arbeitsblatt_Mehrschichtige_Neuronale_Netze.pdf
+pandoc md/KI_Lernziele.md -H pandoc/header.tex -o pdf/KI_Lernziele.pdf
 ```
 
 ## Alle auf einmal

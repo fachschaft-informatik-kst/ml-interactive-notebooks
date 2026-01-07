@@ -1,0 +1,16 @@
+% Shared PDF header for worksheets (Pandoc -> LaTeX)
+\usepackage{fancyhdr}
+
+% Apply the header even on the title page (Pandoc uses 'plain' there)
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \lhead{Kantonsschule Stadelhofen}%
+  \rhead{Kevin Bohn}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Kantonsschule Stadelhofen}
+\rhead{Kevin Bohn}
+\renewcommand{\headrulewidth}{0.4pt}

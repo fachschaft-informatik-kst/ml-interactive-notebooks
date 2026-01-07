@@ -81,7 +81,7 @@ for f in "${files[@]}"; do
   out="$PDF_DIR/${base}.pdf"
 
   echo "pandoc md/$f -> pdf/${base}.pdf"
-  pandoc "$f" -V "geometry:margin=${MARGIN}" -o "$out"
+  pandoc "$f" -V "geometry:margin=${MARGIN}" -H "$SCRIPT_DIR/pandoc/header.tex" -o "$out"
   count=$((count + 1))
 done
 

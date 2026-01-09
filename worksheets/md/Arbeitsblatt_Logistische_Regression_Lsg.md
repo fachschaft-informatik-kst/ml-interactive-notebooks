@@ -100,8 +100,8 @@ Korrekte: 6/6
 
 ## Visualisierung der Modelle A und B
 ![Sigmoid-Modellvergleich mit Datenpunkten](svg/sigmoid_modelvergleich.svg)
-Die Grafik zeigt beide Sigmoid-Kurven ($p_A = \sigma(1.0x - 1.8)$ in Blau, $p_B = \sigma(2.0x - 4.2)$ in Orange) sowie die Trainingspunkte farblich nach Klasse (grau = nicht bestanden, grün = bestanden) im Bereich $x \in [-8,8]$.
+Die Grafik zeigt beide Sigmoid-Kurven ($p_A = \sigma(1.0x - 1.8)$ in Blau, $p_B = \sigma(1.4x - 2.9)$ in Rot) sowie die Trainingspunkte respektive die wahren Werte farblich nach Klasse (grau = nicht bestanden, grün = bestanden) im Bereich $x \in [-3,7]$. Die Wahrschlichkeit bei $p=0.5$ ist als gestrichelte Linie hervorgehoben. Die Trennlinie für Modell A liegt bei $x=1.8$, für Modell B bei $x \approx 2.07$. Dadurch wird deutlich, dass Modell B den kritischen Punkt $x=2.0$ besser trennt.
 
 # Reflexion (Musterantwort)
-1. Accuracy kann irreführend sein, wenn Klassen stark unausgeglichen sind (z. B. 99% Klasse 0). Dann kann ein triviales Modell „immer 0“ hohe Accuracy haben, aber nichts Nützliches lernen.
-2. Wahrscheinlichkeiten sind hilfreicher als harte 0/1-Labels, weil sie Unsicherheit zeigen: Man kann Schwellen anpassen und Entscheidungen (False Positives, False Negatives) besser steuern.
+1. Die logistische Regression ist besser als lineare Regression geeignet, wenn die Zielgrösse kategorisch/binär ist (Ja/Nein, 0/1). Die logistische Regression liefert Wahrscheinlichkeiten im Bereich $(0,1)$, während lineare Regression beliebige Werte ausserhalb dieses Bereichs vorhersagen kann und daher ungeeignet ist.
+2. Wahrscheinlichkeiten sind hilfreicher als harte 0/1-Entscheidungen, weil sie Unsicherheit quantifizieren: Man sieht, wie sicher sich das Modell ist. Dies erlaubt es, die Schwelle anzupassen und so False Positives/False Negatives zu kontrollieren – je nach Anforderung des Problems.

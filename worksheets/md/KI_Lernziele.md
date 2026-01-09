@@ -8,7 +8,7 @@ header-includes:
   - \renewcommand{\figurename}{Abbildung}
 ---
 
-Erlaubte Hilfsmittel: Taschenrechner, Lineal
+Erlaubte Hilfsmittel: Taschenrechner (nicht programmierbar), Lineal
 
 ## 1. Einteilung der KI
 Ich kann

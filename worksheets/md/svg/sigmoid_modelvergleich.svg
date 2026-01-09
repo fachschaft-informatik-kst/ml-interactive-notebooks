@@ -8,6 +8,107 @@
     </style>
   <rect x="0" y="0" width="640" height="400" fill="white"/>
   <g>
+    <line class="grid-fine" x1="60" y1="330.0" x2="580" y2="330.0"/>
+    <line class="grid-fine" x1="60" y1="327.0" x2="580" y2="327.0"/>
+    <line class="grid-fine" x1="60" y1="324.0" x2="580" y2="324.0"/>
+    <line class="grid-fine" x1="60" y1="321.0" x2="580" y2="321.0"/>
+    <line class="grid-fine" x1="60" y1="318.0" x2="580" y2="318.0"/>
+    <line class="grid-fine" x1="60" y1="315.0" x2="580" y2="315.0"/>
+    <line class="grid-fine" x1="60" y1="312.0" x2="580" y2="312.0"/>
+    <line class="grid-fine" x1="60" y1="309.0" x2="580" y2="309.0"/>
+    <line class="grid-fine" x1="60" y1="306.0" x2="580" y2="306.0"/>
+    <line class="grid-fine" x1="60" y1="303.0" x2="580" y2="303.0"/>
+    <line class="grid-fine" x1="60" y1="300.0" x2="580" y2="300.0"/>
+    <line class="grid-fine" x1="60" y1="297.0" x2="580" y2="297.0"/>
+    <line class="grid-fine" x1="60" y1="294.0" x2="580" y2="294.0"/>
+    <line class="grid-fine" x1="60" y1="291.0" x2="580" y2="291.0"/>
+    <line class="grid-fine" x1="60" y1="288.0" x2="580" y2="288.0"/>
+    <line class="grid-fine" x1="60" y1="285.0" x2="580" y2="285.0"/>
+    <line class="grid-fine" x1="60" y1="282.0" x2="580" y2="282.0"/>
+    <line class="grid-fine" x1="60" y1="279.0" x2="580" y2="279.0"/>
+    <line class="grid-fine" x1="60" y1="276.0" x2="580" y2="276.0"/>
+    <line class="grid-fine" x1="60" y1="273.0" x2="580" y2="273.0"/>
+    <line class="grid-fine" x1="60" y1="270.0" x2="580" y2="270.0"/>
+    <line class="grid-fine" x1="60" y1="267.0" x2="580" y2="267.0"/>
+    <line class="grid-fine" x1="60" y1="264.0" x2="580" y2="264.0"/>
+    <line class="grid-fine" x1="60" y1="261.0" x2="580" y2="261.0"/>
+    <line class="grid-fine" x1="60" y1="258.0" x2="580" y2="258.0"/>
+    <line class="grid-fine" x1="60" y1="255.0" x2="580" y2="255.0"/>
+    <line class="grid-fine" x1="60" y1="252.0" x2="580" y2="252.0"/>
+    <line class="grid-fine" x1="60" y1="249.0" x2="580" y2="249.0"/>
+    <line class="grid-fine" x1="60" y1="246.0" x2="580" y2="246.0"/>
+    <line class="grid-fine" x1="60" y1="243.0" x2="580" y2="243.0"/>
+    <line class="grid-fine" x1="60" y1="240.0" x2="580" y2="240.0"/>
+    <line class="grid-fine" x1="60" y1="236.99999999999997" x2="580" y2="236.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="233.99999999999997" x2="580" y2="233.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="230.99999999999997" x2="580" y2="230.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="227.99999999999997" x2="580" y2="227.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="224.99999999999997" x2="580" y2="224.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="222.0" x2="580" y2="222.0"/>
+    <line class="grid-fine" x1="60" y1="219.0" x2="580" y2="219.0"/>
+    <line class="grid-fine" x1="60" y1="216.0" x2="580" y2="216.0"/>
+    <line class="grid-fine" x1="60" y1="213.0" x2="580" y2="213.0"/>
+    <line class="grid-fine" x1="60" y1="210.0" x2="580" y2="210.0"/>
+    <line class="grid-fine" x1="60" y1="207.0" x2="580" y2="207.0"/>
+    <line class="grid-fine" x1="60" y1="204.00000000000003" x2="580" y2="204.00000000000003"/>
+    <line class="grid-fine" x1="60" y1="201.00000000000003" x2="580" y2="201.00000000000003"/>
+    <line class="grid-fine" x1="60" y1="198.00000000000003" x2="580" y2="198.00000000000003"/>
+    <line class="grid-fine" x1="60" y1="195.0" x2="580" y2="195.0"/>
+    <line class="grid-fine" x1="60" y1="192.0" x2="580" y2="192.0"/>
+    <line class="grid-fine" x1="60" y1="189.0" x2="580" y2="189.0"/>
+    <line class="grid-fine" x1="60" y1="186.0" x2="580" y2="186.0"/>
+    <line class="grid-fine" x1="60" y1="183.0" x2="580" y2="183.0"/>
+    <line class="grid-fine" x1="60" y1="180.0" x2="580" y2="180.0"/>
+    <line class="grid-fine" x1="60" y1="177.0" x2="580" y2="177.0"/>
+    <line class="grid-fine" x1="60" y1="174.0" x2="580" y2="174.0"/>
+    <line class="grid-fine" x1="60" y1="171.0" x2="580" y2="171.0"/>
+    <line class="grid-fine" x1="60" y1="168.0" x2="580" y2="168.0"/>
+    <line class="grid-fine" x1="60" y1="165.0" x2="580" y2="165.0"/>
+    <line class="grid-fine" x1="60" y1="161.99999999999997" x2="580" y2="161.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="158.99999999999997" x2="580" y2="158.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="156.0" x2="580" y2="156.0"/>
+    <line class="grid-fine" x1="60" y1="153.0" x2="580" y2="153.0"/>
+    <line class="grid-fine" x1="60" y1="150.0" x2="580" y2="150.0"/>
+    <line class="grid-fine" x1="60" y1="147.0" x2="580" y2="147.0"/>
+    <line class="grid-fine" x1="60" y1="144.0" x2="580" y2="144.0"/>
+    <line class="grid-fine" x1="60" y1="141.0" x2="580" y2="141.0"/>
+    <line class="grid-fine" x1="60" y1="138.0" x2="580" y2="138.0"/>
+    <line class="grid-fine" x1="60" y1="135.0" x2="580" y2="135.0"/>
+    <line class="grid-fine" x1="60" y1="132.0" x2="580" y2="132.0"/>
+    <line class="grid-fine" x1="60" y1="129.0" x2="580" y2="129.0"/>
+    <line class="grid-fine" x1="60" y1="125.99999999999999" x2="580" y2="125.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="122.99999999999999" x2="580" y2="122.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="119.99999999999999" x2="580" y2="119.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="117.00000000000001" x2="580" y2="117.00000000000001"/>
+    <line class="grid-fine" x1="60" y1="114.00000000000001" x2="580" y2="114.00000000000001"/>
+    <line class="grid-fine" x1="60" y1="111.0" x2="580" y2="111.0"/>
+    <line class="grid-fine" x1="60" y1="108.0" x2="580" y2="108.0"/>
+    <line class="grid-fine" x1="60" y1="105.0" x2="580" y2="105.0"/>
+    <line class="grid-fine" x1="60" y1="102.0" x2="580" y2="102.0"/>
+    <line class="grid-fine" x1="60" y1="99.0" x2="580" y2="99.0"/>
+    <line class="grid-fine" x1="60" y1="95.99999999999999" x2="580" y2="95.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="92.99999999999999" x2="580" y2="92.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="89.99999999999999" x2="580" y2="89.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="86.99999999999999" x2="580" y2="86.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="83.99999999999997" x2="580" y2="83.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="80.99999999999997" x2="580" y2="80.99999999999997"/>
+    <line class="grid-fine" x1="60" y1="78.0" x2="580" y2="78.0"/>
+    <line class="grid-fine" x1="60" y1="75.0" x2="580" y2="75.0"/>
+    <line class="grid-fine" x1="60" y1="72.0" x2="580" y2="72.0"/>
+    <line class="grid-fine" x1="60" y1="69.0" x2="580" y2="69.0"/>
+    <line class="grid-fine" x1="60" y1="66.0" x2="580" y2="66.0"/>
+    <line class="grid-fine" x1="60" y1="62.99999999999999" x2="580" y2="62.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="59.99999999999999" x2="580" y2="59.99999999999999"/>
+    <line class="grid-fine" x1="60" y1="56.999999999999986" x2="580" y2="56.999999999999986"/>
+    <line class="grid-fine" x1="60" y1="53.999999999999986" x2="580" y2="53.999999999999986"/>
+    <line class="grid-fine" x1="60" y1="50.999999999999986" x2="580" y2="50.999999999999986"/>
+    <line class="grid-fine" x1="60" y1="47.999999999999986" x2="580" y2="47.999999999999986"/>
+    <line class="grid-fine" x1="60" y1="44.99999999999998" x2="580" y2="44.99999999999998"/>
+    <line class="grid-fine" x1="60" y1="42.000000000000014" x2="580" y2="42.000000000000014"/>
+    <line class="grid-fine" x1="60" y1="39.00000000000001" x2="580" y2="39.00000000000001"/>
+    <line class="grid-fine" x1="60" y1="36.00000000000001" x2="580" y2="36.00000000000001"/>
+    <line class="grid-fine" x1="60" y1="33.0" x2="580" y2="33.0"/>
+    <line class="grid-fine" x1="60" y1="30.0" x2="580" y2="30.0"/>
     <line class="grid" x1="60" y1="330.0" x2="580" y2="330.0"/>
     <text class="label" x="54" y="334.0" text-anchor="end">0.0</text>
     <line class="grid" x1="60" y1="300.0" x2="580" y2="300.0"/>
@@ -30,16 +131,47 @@
     <text class="label" x="54" y="63.99999999999999" text-anchor="end">0.9</text>
     <line class="grid" x1="60" y1="30.0" x2="580" y2="30.0"/>
     <text class="label" x="54" y="34.0" text-anchor="end">1.0</text>
+    <line class="grid-fine" x1="60.0" y1="30" x2="60.0" y2="330"/>
+    <line class="grid-fine" x1="86.0" y1="30" x2="86.0" y2="330"/>
+    <line class="grid-fine" x1="112.0" y1="30" x2="112.0" y2="330"/>
+    <line class="grid-fine" x1="138.0" y1="30" x2="138.0" y2="330"/>
+    <line class="grid-fine" x1="164.0" y1="30" x2="164.0" y2="330"/>
+    <line class="grid-fine" x1="190.0" y1="30" x2="190.0" y2="330"/>
+    <line class="grid-fine" x1="216.0" y1="30" x2="216.0" y2="330"/>
+    <line class="grid-fine" x1="242.0" y1="30" x2="242.0" y2="330"/>
+    <line class="grid-fine" x1="268.0" y1="30" x2="268.0" y2="330"/>
+    <line class="grid-fine" x1="294.0" y1="30" x2="294.0" y2="330"/>
+    <line class="grid-fine" x1="320.0" y1="30" x2="320.0" y2="330"/>
+    <line class="grid-fine" x1="346.0" y1="30" x2="346.0" y2="330"/>
+    <line class="grid-fine" x1="372.0" y1="30" x2="372.0" y2="330"/>
+    <line class="grid-fine" x1="398.0" y1="30" x2="398.0" y2="330"/>
+    <line class="grid-fine" x1="424.0" y1="30" x2="424.0" y2="330"/>
+    <line class="grid-fine" x1="450.0" y1="30" x2="450.0" y2="330"/>
+    <line class="grid-fine" x1="476.0" y1="30" x2="476.0" y2="330"/>
+    <line class="grid-fine" x1="502.0" y1="30" x2="502.0" y2="330"/>
+    <line class="grid-fine" x1="528.0" y1="30" x2="528.0" y2="330"/>
+    <line class="grid-fine" x1="554.0" y1="30" x2="554.0" y2="330"/>
+    <line class="grid-fine" x1="580.0" y1="30" x2="580.0" y2="330"/>
     <line class="grid" x1="60.0" y1="30" x2="60.0" y2="330"/>
     <text class="label" x="60.0" y="350" text-anchor="middle">-3</text>
+    <line class="grid" x1="112.0" y1="30" x2="112.0" y2="330"/>
+    <text class="label" x="112.0" y="350" text-anchor="middle">-2</text>
     <line class="grid" x1="164.0" y1="30" x2="164.0" y2="330"/>
     <text class="label" x="164.0" y="350" text-anchor="middle">-1</text>
+    <line class="grid" x1="216.0" y1="30" x2="216.0" y2="330"/>
+    <text class="label" x="216.0" y="350" text-anchor="middle">0</text>
     <line class="grid" x1="268.0" y1="30" x2="268.0" y2="330"/>
     <text class="label" x="268.0" y="350" text-anchor="middle">1</text>
+    <line class="grid" x1="320.0" y1="30" x2="320.0" y2="330"/>
+    <text class="label" x="320.0" y="350" text-anchor="middle">2</text>
     <line class="grid" x1="372.0" y1="30" x2="372.0" y2="330"/>
     <text class="label" x="372.0" y="350" text-anchor="middle">3</text>
+    <line class="grid" x1="424.0" y1="30" x2="424.0" y2="330"/>
+    <text class="label" x="424.0" y="350" text-anchor="middle">4</text>
     <line class="grid" x1="476.0" y1="30" x2="476.0" y2="330"/>
     <text class="label" x="476.0" y="350" text-anchor="middle">5</text>
+    <line class="grid" x1="528.0" y1="30" x2="528.0" y2="330"/>
+    <text class="label" x="528.0" y="350" text-anchor="middle">6</text>
     <line class="grid" x1="580.0" y1="30" x2="580.0" y2="330"/>
     <text class="label" x="580.0" y="350" text-anchor="middle">7</text>
   </g>

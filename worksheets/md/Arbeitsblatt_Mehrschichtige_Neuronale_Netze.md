@@ -11,7 +11,7 @@ header-includes:
 
 ## Einleitung: Warum braucht man mehr als ein Perzeptron?
 
-Ein einzelnes Perzeptron (Neuron) kann nur lineare Entscheidungsgrenzen lernen – also **eine** Trennlinie im 2D-Raum (eine Gerade). Sobald die Daten jedoch nicht linear trennbar sind, wie beim XOR-Problem, kommt ein einzelnes Perzeptron an seine Grenzen. Die Lösung dieses Problems ist die Kombination von einzelnen Perzeptronen in mehreren Schichten. In diesem Arbeitsblatt geht es darum, **wie** ein mehrschichtiges Netz das Problem „in Zwischenschritten“ lösen kann.
+Ein einzelnes Perzeptron (Neuron) kann nur lineare Entscheidungsgrenzen lernen – also **eine** Trennlinie im 2D-Raum (eine Gerade). Sobald die Daten jedoch nicht linear trennbar sind, wie beim XOR-Gatter, kommt ein einzelnes Perzeptron an seine Grenzen. Die Lösung dieses Problems ist die Kombination von einzelnen Perzeptronen in mehreren Schichten. In diesem Arbeitsblatt geht es darum, **wie** ein mehrschichtiges Netz das Problem „in Zwischenschritten“ lösen kann.
 
 ## 2. Lernziel
 
@@ -27,7 +27,7 @@ Ich kann
 
 ## 3. Mehrschichtiges Netz (versteckte Schicht) als „Zwischenschritt-Maschine"
 
-Ein **mehrschichtiges** Netz besteht aus mehreren Perzeptron-ähnlichen Bausteinen hintereinander. Dadurch kann es **mehrere Regionen** im Koordinatensystem bilden. In der Grafik sieht man ein einfaches mehrschichtiges Netz mit einer versteckten Schicht. In der versteckten Schicht können mehrere Neuronen jeweils eigene Trennlinien lernen, die zusammen komplexere Entscheidungsgrenzen ermöglichen. In unserem Beispiel sind 2 Neuronen in der versteckten Schicht dargestellt, die jeweils unterschiedliche Trennlinien lernen können. Neben den Eingangsgewichten gibt es auch Bias-Gewichte, die wie ein zusätzlicher fester Eingang „1“ wirken. In der Output-Schicht wird dann aus den Ausgaben der versteckten Schicht eine finale Entscheidung getroffen. Die Aktivierungsfunktion (z.B. Step-Funktion) sorgt dafür, dass das Netz nicht nur lineare Kombinationen lernt, sondern auch komplexere Muster erkennen kann. Die Anzahl Gewichte im Netz hängt von der Anzahl Neuronen und Schichten ab, da jede Verbindung (Kante) im Netz ein eigenes Gewicht hat. Somit erhöht sich die Anzahl der Gwichte von ursprünglich 3 im Perzeptron auf insgesamt 9 (6 in die versteckte Schicht und 3 in die Output-Schicht, inklusive Bias-Gewichte).
+Ein **mehrschichtiges** Netz besteht aus mehreren Perzeptron-ähnlichen Bausteinen hintereinander. Dadurch kann es **mehrere Regionen** im Koordinatensystem bilden. In der Abbildung 1 sieht man ein einfaches mehrschichtiges Netz mit einer versteckten Schicht. In der versteckten Schicht können mehrere Neuronen jeweils eigene Trennlinien lernen, die zusammen komplexere Entscheidungsgrenzen ermöglichen. In unserem Beispiel sind 2 Neuronen in der versteckten Schicht dargestellt, die jeweils unterschiedliche Trennlinien lernen können. Neben den Eingangsgewichten gibt es auch Bias-Gewichte, die wie ein zusätzlicher fester Eingang „1“ wirken. In der Output-Schicht wird dann aus den Ausgaben der versteckten Schicht eine finale Entscheidung getroffen. Die Aktivierungsfunktion (z.B. Step-Funktion) sorgt dafür, dass das Netz nicht nur lineare Kombinationen lernt, sondern auch komplexere Muster erkennen kann. Die Anzahl Gewichte im Netz hängt von der Anzahl Neuronen und Schichten ab, da jede Verbindung (Kante) im Netz ein eigenes Gewicht hat. Somit erhöht sich die Anzahl der Gwichte von ursprünglich 3 im Perzeptron auf insgesamt 9 (6 in die versteckte Schicht und 3 in die Output-Schicht, inklusive Bias-Gewichte).
 
 ![Einfaches mehrschichtiges Netz mit zwei Neuronen in der versteckten Schicht und einem Output-Neuron. Der Bias ist als fester Eingang „1“ dargestellt; jede Kante entspricht einem Gewicht.](resources/merhschichtiges_netzwerk.svg){ width=100% fig-pos="H" }
 
@@ -84,7 +84,7 @@ $$
 
 ## 4. XOR mit versteckter Schicht
 
-Wir versuchen nun nachfolgend das XOR-Gatter mit einer versteckten Schicht zu bauen. Dabei verwenden wir drei Perzeptron-ähnliche Neuronen. Die zwei Neuronen in der versteckten Schicht bereiten jeweils einenen Zwischenschritt vor, die das Output-Neuron dann kombiniert, um XOR zu realisieren.
+Wir versuchen nun nachfolgend das XOR-Gatter mit einer versteckten Schicht zu bauen. Dabei verwenden wir drei Perzeptron-ähnliche Neuronen. Die zwei Neuronen in der versteckten Schicht bereiten jeweils einen Zwischenschritt vor, die das Output-Neuron dann kombiniert, um XOR zu realisieren.
 
 - Neuron der versteckten Schicht $h_1$ macht **OR**
 - Neuron der versteckten Schicht $h_2$ macht **NAND**
@@ -133,7 +133,7 @@ Wenn man **beide** Bedingungen gleichzeitig nimmt (OR=1 **und** NAND=1), bleiben
 
 ## 5. Backpropagation: Wie lernt das Netz?
 
-Die Aufgabe 4 hat gezeigt, wie man XOR mit einem mehrschichtigen Netz lösen kann. Normalerweise würde das Netz seine Gewichte jedoch **lernen** müssen, anstatt sie mithilfe von bestehenden Logik Gattern zu „konstruieren“. Die in unserem Netzwerk vorhandenen 9 Gewichte werden wähnend dem Lernprozess so angepasst, dass die Vorhersagen $\hat{y}$ möglichst gut zu den Zielwerten $y$ passen. Dies geschieht durch einen Prozess namens **Backpropagation** (Rückwärtsausbreitung des Fehlers).
+Die Aufgabe 4 hat gezeigt, wie man XOR mit einem mehrschichtigen Netz lösen kann. Normalerweise würde das Netz seine Gewichte jedoch **lernen** müssen, anstatt sie mithilfe von bestehenden Logik Gattern zu "konstruieren". Die in unserem Netzwerk vorhandenen 9 Gewichte werden während dem Lernprozess so angepasst, dass die Vorhersagen $\hat{y}$ möglichst gut zu den Zielwerten $y$ passen. Dies geschieht durch einen Prozess namens **Backpropagation** (Rückwärtsausbreitung des Fehlers).
 
 ### 5.1 Aufgabe: Welche Gewichte ändern sich wie?
 

@@ -58,24 +58,6 @@ Startgewichte $w_0=w_1=w_2=0.1$, Lernrate $\eta=0.2$.
 | 1 | 0 | 0.2 | 1 | Ja |
 | 1 | 1 | 0.3 | 1 | Nein |
 
-Nach Update 1 (Gewichte $w_0=w_1=w_2=-0.1$):
-
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|:---:|
-| 0 | 0 | -0.1 | Nein |
-| 0 | 1 | -0.2 | Nein |
-| 1 | 0 | -0.2 | Nein |
-| 1 | 1 | -0.3 | Ja |
-
-Nach Update 2 (Gewichte $w_0=0.1, w_1=-0.1, w_2=-0.1$):
-
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|:---:|
-| 0 | 0 | 0.1 | Ja |
-| 0 | 1 | 0.0 | Ja |
-| 1 | 0 | 0.0 | Ja |
-| 1 | 1 | -0.1 | Ja |
-
 ## Aufgabe 3b: Gewichte aktualisieren
 Fehler beim ersten falschen Beispiel $(1,1)$: $y-\hat{y} = -1$.
 
@@ -87,16 +69,16 @@ Fehler beim ersten falschen Beispiel $(1,1)$: $y-\hat{y} = -1$.
 | $w_1$ | 0.1 | -1 | -0.1 |
 | $w_2$ | 0.1 | -1 | -0.1 |
 
-Prüfe erneut: erstes falsches Beispiel nun $(0,0)$ mit $y-\hat{y}=1$.
+Überprüfung mit neuen Gewichten $w_0=w_1=w_2=-0.1$:
 
-Überprüfung nach Update 1 (neue Gewichte $w_0=w_1=w_2=-0.1$):
+| $x_1$ | $x_2$ | $z$ | $\hat{y}$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|:---:|
+| 0 | 0 | -0.1 | 0 | Nein |
+| 0 | 1 | -0.2 | 0 | Nein |
+| 1 | 0 | -0.2 | 0 | Nein |
+| 1 | 1 | -0.3 | 0 | Ja |
 
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|:---:|
-| 0 | 0 | -0.1 | Nein |
-| 0 | 1 | -0.2 | Nein |
-| 1 | 0 | -0.2 | Nein |
-| 1 | 1 | -0.3 | Ja |
+Erstes falsches Beispiel ist nun $(0,0)$ mit $y-\hat{y}=1$.
 
 **Update 2** (nutzt $(0,0)$):
 
@@ -106,14 +88,16 @@ Prüfe erneut: erstes falsches Beispiel nun $(0,0)$ mit $y-\hat{y}=1$.
 | $w_1$ | -0.1 | 1 | -0.1 |
 | $w_2$ | -0.1 | 1 | -0.1 |
 
-Überprüfung nach Update 2 (Gewichte $w_0=0.1, w_1=-0.1, w_2=-0.1$):
+Überprüfung mit neuen Gewichten $w_0=0.1, w_1=-0.1, w_2=-0.1$:
 
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|:---:|
-| 0 | 0 | 0.1 | Ja |
-| 0 | 1 | 0.0 | Ja |
-| 1 | 0 | 0.0 | Ja |
-| 1 | 1 | -0.1 | Ja |
+| $x_1$ | $x_2$ | $z$ | $\hat{y}$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|:---:|
+| 0 | 0 | 0.1 | 1 | Ja |
+| 0 | 1 | 0.0 | 1 | Ja |
+| 1 | 0 | 0.0 | 1 | Ja |
+| 1 | 1 | -0.1 | 0 | Ja |
+
+Alle Vorhersagen sind nun korrekt!
 
 \newpage
 

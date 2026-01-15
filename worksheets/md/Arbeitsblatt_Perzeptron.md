@@ -38,7 +38,7 @@ $$
 
 ### 2.1 Bias-Effekt
 
-Der Bias-Input $x_0=1$ mit Gewicht $w_0$ ermöglicht es, einen Schwellenwert zu setzen, der die Trennlinie im Eingaberaum verschiebt. Dadurch kann das Perzeptron flexibler auf verschiedene Datenverteilungen reagieren. Dies funktioniert analog zur Linearen Gleichung einer Geraden im zweidimensionalen Raum: in der Gleichung $y = mx + b$ entspricht der Bias $b$ dem y-Achsenabschnitt, der die Gerade nach oben oder unten verschiebt, ohne ihre Steigung $m$ zu verändern. Da das Perzeptron eine gewichtete Summe berechnet, wirkt der Bias $w_0$ ähnlich wie der y-Achsenabschnitt in der Geradengleichung. Das Bias-Gewicht $w_0$ beeinflusst, wo die Trennlinie die Achsen schneidet, und somit, wie die Klassen im Eingaberaum getrennt werden können. Ein negativer Bias verschiebt die Trennlinie nach oben, während ein positiver Bias sie nach unten verschiebt. Im unteren Beispiel sieht man, wie sich die Trennlinie durch unterschiedliche Bias-Gewichte verändert. Im ersten Fall ($w_0=-0.5$) schneidet die Linie die y-Achse höher als im zweiten Fall ($w_0=0.2$). 
+Der Bias-Input $x_0=1$ mit Gewicht $w_0$ ermöglicht es, einen Schwellenwert zu setzen, der die Trennlinie im Eingaberaum verschiebt. Dadurch kann das Perzeptron flexibler auf verschiedene Datenverteilungen reagieren. Dies funktioniert analog zur Linearen Gleichung einer Geraden im zweidimensionalen Raum: in der Gleichung $y = mx + b$ entspricht der Bias $b$ dem y-Achsenabschnitt, der die Gerade nach oben oder unten verschiebt, ohne ihre Steigung $m$ zu verändern. Das Bias-Gewicht $w_0$ beeinflusst, wo die Trennlinie die Achsen schneidet, und somit, wie die Klassen im Eingaberaum getrennt werden können. Ein negativer Bias verschiebt die Trennlinie nach oben, während ein positiver Bias sie nach unten verschiebt. Im unteren Beispiel sieht man, wie sich die Trennlinie durch unterschiedliche Bias-Gewichte verändert. Im ersten Fall ($w_0=-0.5$) schneidet die Linie die y-Achse höher als im zweiten Fall ($w_0=0.2$). 
 
 ![Bias verschiebt die Trennlinie](svg/perzeptron_bias_shift.svg)
 
@@ -60,7 +60,7 @@ AND-Wahrheitstafel (Soll-Ausgabe $y$):
 | 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
-Berechne nun $z$ $\hat{y}$ und prüfe, ob das Perzeptron die Soll-Ausgabe trifft:
+Berechne nun $z$, $\hat{y}$ und prüfe, ob das Perzeptron die Soll-Ausgabe trifft:
 
 | $x_1$ | $x_2$ | $z$ | $\hat{y}$ | $y=\hat{y}$? (Ja/Nein) |
 |---:|---:|---:|---:|:---:|
@@ -154,8 +154,8 @@ Nutze das Flussdiagramm als Leitfaden, um zu verstehen, wie die Gewichte im Perz
 ## Aufgabe 3a: Vorhersage und Fehler
 Führe einen Durchlauf über die vier Beispiele durch.
 
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|---:|---:|
+| $x_1$ | $x_2$ | $z$ | $\hat{y}$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|:---:|
 | 0 | 0 |  |  |  |
 | 0 | 1 |  |  |  |
 | 1 | 0 |  |  |  |
@@ -181,16 +181,14 @@ Trage nach jedem Schritt die Werte ein (Schritt 2 startet mit den neuen Gewichte
 | $w_1$ |  |  |  |
 | $w_2$ |  |  |  |
 
-Überprüfe erneut alle Beispiele mit den neuen Gewichten und finde das erste falsche Beispiel:
+Überprüfe erneut alle Beispiele mit den neuen Gewichten:
 
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|---:|---:|
+| $x_1$ | $x_2$ | $z$ | $\hat{y}$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|:---:|
 | 0 | 0 |  |  |  |
 | 0 | 1 |  |  |  |
 | 1 | 0 |  |  |  |
 | 1 | 1 |  |  |  |
-
-\newpage
 
 **Update 2**
 
@@ -200,10 +198,12 @@ Trage nach jedem Schritt die Werte ein (Schritt 2 startet mit den neuen Gewichte
 | $w_1$ |  |  |  |
 | $w_2$ |  |  |  |
 
-Überprüfe erneut alle Beispiele mit den neuen Gewichten und finde das erste falsche Beispiel:
+\newpage
 
-| $x_1$ | $x_2$ | $z$ | $y=\hat{y}$? (Ja/Nein) |
-|---:|---:|---:|---:|---:|
+Überprüfe erneut alle Beispiele mit den neuen Gewichten:
+
+| $x_1$ | $x_2$ | $z$ | $\hat{y}$ | $y=\hat{y}$? (Ja/Nein) |
+|---:|---:|---:|---:|:---:|
 | 0 | 0 |  |  |  |
 | 0 | 1 |  |  |  |
 | 1 | 0 |  |  |  |

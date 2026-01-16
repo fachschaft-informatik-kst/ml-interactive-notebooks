@@ -16,7 +16,7 @@ header-includes:
 \hline
 								\textbf{Name} & \textbf{Datum} & \textbf{Zeit} & \textbf{max. Punkte} \\
 \hline
-\rule{0pt}{2.2em} & 22.01.26 & 45 min & 40 \\
+\rule{0pt}{2.2em} & 22.01.26 & 50 min & 40 \\
 \hline
 \end{tabular}
 

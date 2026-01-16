@@ -55,9 +55,9 @@ Ich kann
 - einen Vorwärtsdurchlauf rechnen: gewichtete Summe $z$ und Step-Funktion $g(z)$.
 - erklären, wie der **Bias** die Trennlinie verschiebt.
 - einfache logische Gatter (z.B. AND/OR) als lineare Trennprobleme verstehen.
-- die **Perzeptron-Lernregel** $w_i = w_i + \eta\,(y-\hat{y})\,x_i$ auf ein Trainingsbeispiel anwenden.
-- die Rolle der **Lernrate** $\eta$ erklären (zu gross/zu klein).
-- erklären, warum XOR mit einem einzelnen Perzeptron nicht lösbar ist (**nicht linear separabel**).
+- die **Perzeptron-Lernregel** $w_i = w_i + \eta\,(y-\hat{y})\,x_i$ auf ein Trainingsbeispiel anwenden. (nicht mehr Prüfungsstoff)
+- die Rolle der **Lernrate** $\eta$ erklären (zu gross/zu klein). (nicht mehr Prüfungsstoff)
+- erklären, warum XOR mit einem einzelnen Perzeptron nicht lösbar ist (**nicht linear separabel**). (nicht mehr Prüfungsstoff)
 
 ## 6. Mehrschichtige neuronale Netze (nicht mehr Prüfungsstoff)
 Ich kann

@@ -1,11 +1,16 @@
 % Shared PDF header for worksheets (Pandoc -> LaTeX)
+\usepackage{array}
 \usepackage{fancyhdr}
+
+% Avoid fancyhdr warnings about \headheight
+\setlength{\headheight}{14pt}
 
 % Apply the header even on the title page (Pandoc uses 'plain' there)
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \lhead{Kantonsschule Stadelhofen}%
   \rhead{Kevin Bohn}%
+  \cfoot{\thepage}%
   \renewcommand{\headrulewidth}{0.4pt}%
 }
 
@@ -13,4 +18,5 @@
 \fancyhf{}
 \lhead{Kantonsschule Stadelhofen}
 \rhead{Kevin Bohn}
+\cfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}

@@ -46,7 +46,7 @@ Ein KI-System funktioniert nur, wenn es zuvor mit Trainingsdaten trainiert wurde
 Aussage & richtig & falsch \\
 \hline
 Wissensbasierte Systeme nutzen Regeln/Expertenwissen statt (Daten-)Training. & $\boxtimes$ & $\square$ \\
-Damit ein System lernen kann, braucht es immer gelabelte Trainingsdaten. & $\square$ & $\boxtimes$ \\
+Ein lernendes System braucht immer gelabelte Trainingsdaten. & $\square$ & $\boxtimes$ \\
 \hline
 \end{tabular}
 

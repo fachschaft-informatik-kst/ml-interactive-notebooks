@@ -20,45 +20,48 @@ header-includes:
 \hline
 \end{tabular}
 
-\vspace{0.6cm}
+\vspace{2cm}
 
-\begin{tabular}{|>{\raggedright\arraybackslash}m{5.2cm}|>{\centering\arraybackslash}m{2.6cm}|>{\centering\arraybackslash}m{2.9cm}|}
+\begin{tabular}{|>{\centering\arraybackslash}m{5.2cm}|>{\centering\arraybackslash}m{2.6cm}|>{\centering\arraybackslash}m{2.9cm}|}
 \hline
 					\multicolumn{1}{|>{\centering\arraybackslash}m{5.2cm}|}{\textbf{Teilbereich}} & \textbf{max. Punkte} & \textbf{Erreichte Punkte} \\
 \hline
-\rule{0pt}{2.2em}A: Multiple Choice & 8 & \\
+\rule[-1.1em]{0pt}{2.2em}A: Multiple Choice & 8 & \\
 \hline
-\rule{0pt}{2.2em}B: Lineare Regression & 12 & \\
+\rule[-1.1em]{0pt}{2.2em}B: Lineare Regression & 12 & \\
 \hline
-\rule{0pt}{2.2em}C: Logistische Regression & 10 & \\
+\rule[-1.1em]{0pt}{2.2em}C: Logistische Regression & 10 & \\
 \hline
-\rule{0pt}{2.2em}D: Perzeptron & 10 & \\
+\rule[-1.1em]{0pt}{2.2em}D: Perzeptron & 10 & \\
 \hline
-\rule{0pt}{2.2em}\textbf{Gesamt} & \textbf{40} & \\
+\rule[-1.1em]{0pt}{2.2em}\textbf{Gesamt} & \textbf{40} & \\
 \hline
-\rule{0pt}{2.2em}\textbf{Note} &  & \\
+\rule[-1.1em]{0pt}{2.2em}\textbf{Note} &  & \\
 \hline
 \end{tabular}
 
 \end{center}
 ```
-\vspace{1cm}
+\vspace{2cm}
 
-**Erlaubte Hilfsmittel:** nicht-programmierbarer Taschenrechner, Lineal.
+**Erlaubte Hilfsmittel:** 
+
+- nicht-programmierbarer Taschenrechner
+- Lineal
 
 \newpage
 ## Teil A: Multiple Choice [8 Punkte]
 Wähle pro Aussage die korrekte Antwort aus (richtig oder falsch). Jede Aussage ist gleich gewichtet und gibt 0.5 Punkte.
 
-1. Einordnung: Welche Aussagen zur Einteilung von KI, Machine Learning (ML) und Deep Learning (DL) stimmen? [2P]
+1. Einordnung: Welche Aussagen zur Einteilung von KI, Machine Learning und Deep Learning stimmen? [2P]
 
 ```{=latex}
 \begingroup
-\small
-\setlength{\tabcolsep}{4pt}
+\normalsize
+\setlength{\tabcolsep}{0pt}
 ```
 
-\begin{tabular}{p{14cm}cc}
+\begin{tabular}{@{}p{\dimexpr\linewidth-2.4cm-10pt\relax}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{}}
 \hline
 Aussage & richtig & falsch \\
 \hline
@@ -79,16 +82,16 @@ Ein KI-System funktioniert nur, wenn es zuvor mit Trainingsdaten trainiert wurde
 
 ```{=latex}
 \begingroup
-\small
-\setlength{\tabcolsep}{4pt}
+\normalsize
+\setlength{\tabcolsep}{0pt}
 ```
 
-\begin{tabular}{p{14cm}cc}
+\begin{tabular}{@{}p{\dimexpr\linewidth-2.4cm-10pt\relax}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{}}
 \hline
 Aussage & richtig & falsch \\
 \hline
 Wissensbasierte Systeme nutzen Regeln/Expertenwissen statt (Daten-)Training. & $\square$ & $\square$ \\
-Damit ein System lernen kann, braucht es immer gelabelte Trainingsdaten. & $\square$ & $\square$ \\
+Ein lernendes System braucht immer gelabelte Trainingsdaten. & $\square$ & $\square$ \\
 \hline
 \end{tabular}
 
@@ -102,18 +105,18 @@ Damit ein System lernen kann, braucht es immer gelabelte Trainingsdaten. & $\squ
 
 ```{=latex}
 \begingroup
-\small
-\setlength{\tabcolsep}{4pt}
+\normalsize
+\setlength{\tabcolsep}{0pt}
 ```
 
-\begin{tabular}{p{14cm}cc}
+\begin{tabular}{@{}p{\dimexpr\linewidth-2.4cm-10pt\relax}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{}}
 \hline
 Aussage & richtig & falsch \\
 \hline
 Reaktive KI reagiert nur auf den aktuellen Zustand und speichert keine Vergangenheit. & $\square$ & $\square$ \\
-"Limited Memory" nutzt vergangene Beobachtungen, aber nur in begrenztem Umfang. & $\square$ & $\square$ \\
-"Theory of Mind" beschreibt KI, die Absichten/Emotionen anderer modellieren kann. & $\square$ & $\square$ \\
-"Self-Aware" (Selbstwahrnehmung) ist heute in typischen Alltagsanwendungen Standard. & $\square$ & $\square$ \\
+"Begrenzte Speicherkapazität" nutzt vergangene Beobachtungen. & $\square$ & $\square$ \\
+"Theorie des Geistes" beschreibt KI, die Absichten/Emotionen anderer modellieren kann. & $\square$ & $\square$ \\
+"Selbstwahrnehmung" ist heute in typischen Alltagsanwendungen Standard. & $\square$ & $\square$ \\
 \hline
 \end{tabular}
 
@@ -127,17 +130,17 @@ Reaktive KI reagiert nur auf den aktuellen Zustand und speichert keine Vergangen
 
 ```{=latex}
 \begingroup
-\small
-\setlength{\tabcolsep}{4pt}
+\normalsize
+\setlength{\tabcolsep}{0pt}
 ```
 
-\begin{tabular}{p{14cm}cc}
+\begin{tabular}{@{}p{\dimexpr\linewidth-2.4cm-10pt\relax}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{}}
 \hline
 Aussage & richtig & falsch \\
 \hline
-Turing-Test: Ununterscheidbarkeit im Gespräch, nicht zwingend Bewusstsein. & $\square$ & $\square$ \\
+Der Turing-Test misst nicht zwingend Bewusstsein, sondern Ununterscheidbarkeit im Gespräch. & $\square$ & $\square$ \\
 Der Turing-Test misst vor allem mathematische Rechenleistung. & $\square$ & $\square$ \\
-Turing bestehen heisst nicht, dass das System Emotionen hat. & $\square$ & $\square$ \\
+Den Turing-Test bestehen heisst nicht, dass das System Emotionen hat. & $\square$ & $\square$ \\
 Der Turing-Test kann auch als reiner Text-Chat durchgeführt werden. & $\square$ & $\square$ \\
 \hline
 \end{tabular}
@@ -152,15 +155,15 @@ Der Turing-Test kann auch als reiner Text-Chat durchgeführt werden. & $\square$
 
 ```{=latex}
 \begingroup
-\small
-\setlength{\tabcolsep}{4pt}
+\normalsize
+\setlength{\tabcolsep}{0pt}
 ```
 
-\begin{tabular}{p{14cm}cc}
+\begin{tabular}{@{}p{\dimexpr\linewidth-2.4cm-10pt\relax}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{\hspace{5pt}}>{\centering\arraybackslash}m{1.2cm}@{}}
 \hline
 Aussage & richtig & falsch \\
 \hline
-Beim Reinforcement Learning lernt man über Belohnung, z.B. Punkte für gefundene Paare. & $\square$ & $\square$ \\
+Beim Reinforcement Learning lernt man über Belohnung. & $\square$ & $\square$ \\
 Beim Unsupervised Learning sind die Labels ("richtige Antworten") von Anfang an vorgegeben. & $\square$ & $\square$ \\
 \hline
 \end{tabular}
@@ -189,7 +192,7 @@ Beim Unsupervised Learning sind die Labels ("richtige Antworten") von Anfang an 
 
  b) Berechne den Mean Squared Error (MSE) des Modells. [2 Punkte]
 
- **Mean Squared Error (MSE) =** 
+ > **MSE =**
 
 \vspace{5cm}
 
@@ -229,20 +232,31 @@ Beim Unsupervised Learning sind die Labels ("richtige Antworten") von Anfang an 
 
  a) Berechne $z$, $p$ (auf 3 Dezimalstellen gerundet) und $\hat{y}$. [3 Punkte]
 
-| $x$ | $y$ | $z = 1.5x - 2.2$ | $p = \sigma(z)$ | $\hat{y}$ (Schwelle 0.5) |
-|---:|---:|---:|---:|:--:|
-| 0.8 | 0 |  |  |  |
-| 1.2 | 0 |  |  |  |
-| 1.8 | 0 |  |  |  |
-| 2.2 | 1 |  |  |  |
-| 2.8 | 1 |  |  |  |
-| 3.2 | 1 |  |  |  |
+```{=latex}
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.3}
+\noindent\hspace*{1.5em}%
+\begin{tabular}{>{\centering\arraybackslash}m{1.0cm} >{\centering\arraybackslash}m{1.0cm} >{\centering\arraybackslash}m{3.4cm} >{\centering\arraybackslash}m{3.0cm} >{\centering\arraybackslash}m{3.8cm}}
+\hline
+$x$ & $y$ & $z = 1.5x - 2.2$ & $p = \sigma(z)$ & $\hat{y}$ (Schwelle 0.5) \\
+\hline
+0.8 & 0 &  &  &  \\
+1.2 & 0 &  &  &  \\
+1.8 & 0 &  &  &  \\
+2.2 & 1 &  &  &  \\
+2.8 & 1 &  &  &  \\
+3.2 & 1 &  &  &  \\
+\hline
+\end{tabular}
+\endgroup
+```
 
 \vspace{1cm}
 
  b) Berechne die Accuracy für die Vorhersagen in a). [1 Punkt]
 
-**Accuracy =**
+ > **Accuracy =**
 
 \vspace{5cm}
 
@@ -273,7 +287,7 @@ Beim Unsupervised Learning sind die Labels ("richtige Antworten") von Anfang an 
 
 \vspace{1cm}
 
- b) Was passiert, wenn man die Schwelle auf 0.7 anhebt? Nenne zwei konkrete Änderungen bei den obigen $p$-Werten. [1 Punkt]
+ b) Was passiert, wenn man die Schwelle auf 0.7 anhebt? Nenne eine konkrete Änderung bei den obigen $p$-Werten. [1 Punkt]
 
 \vspace{3cm}
 
@@ -312,9 +326,9 @@ Das Netzwerk hat durch das Training bereits folgende Gewichte gelernt: $w_0=-1.0
 
  b) Betrachte den Schnitt $x_3=0.5$ und $x_4=0.5$. Leite die Gleichung der Trennlinie in der $x_1$-$x_2$-Ebene her: Setze $z=0.28$ und forme nach $x_2$ um ($x_2 = ax_1+b$). [2 Punkte]
 
- **Erklärung:** Ein Modell mit vier Eingaben hat seine Entscheidungsgrenze im 4D-Raum und kann nicht direkt in ein 2D-Koordinatensystem gezeichnet werden. Deshalb fixieren wir hier $x_3$ und $x_4$ auf feste Werte und betrachten nur den 2D-Schnitt in der $x_1$-$x_2$-Ebene. In einem anderen Schnitt (mit anderen festen $x_3$, $x_4$) kann die Trennlinie verschoben sein.
-
- **Hinweis:** In diesem Schnitt vereinfacht sich die Summe zu $z=-0.8+1.2x_1+0.6x_2$.
+ > **Erklärung:** Ein Modell mit vier Eingaben hat seine Entscheidungsgrenze im 4D-Raum und kann nicht direkt in ein 2D-Koordinatensystem gezeichnet werden. Deshalb fixieren wir hier $x_3$ und $x_4$ auf feste Werte und betrachten nur den 2D-Schnitt in der $x_1$-$x_2$-Ebene. In einem anderen Schnitt (mit anderen festen $x_3$, $x_4$) kann die Trennlinie verschoben sein.
+ 
+ > **Hinweis:** In diesem Schnitt vereinfacht sich die Summe zu $z=-0.8+1.2x_1+0.6x_2$.
 
 \vspace{3cm}
 
@@ -322,7 +336,7 @@ Das Netzwerk hat durch das Training bereits folgende Gewichte gelernt: $w_0=-1.0
 
 \vspace{3cm}
 
-![Koordinatengitter zum der Trennlinie](svg/koordinatengitter_perzeptron_pruefung.svg)
+![Koordinatengitter zum Einzeichnen der Trennlinie](svg/koordinatengitter_perzeptron_pruefung.svg)
 
  d) Erkläre kurz (1–2 Sätze), wie eine Änderung von $w_0$ (Bias) die Trennlinie verschiebt und was das im Zugangssystem konkret bedeutet. [2 Punkte]
 

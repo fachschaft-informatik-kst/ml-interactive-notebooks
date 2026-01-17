@@ -67,9 +67,9 @@ Ein lernendes System braucht immer gelabelte Trainingsdaten. & $\square$ & $\box
 Aussage & richtig & falsch \\
 \hline
 Reaktive KI reagiert nur auf den aktuellen Zustand und speichert keine Vergangenheit. & $\boxtimes$ & $\square$ \\
-"Limited Memory" nutzt vergangene Beobachtungen, aber nur in begrenztem Umfang. & $\boxtimes$ & $\square$ \\
-"Theory of Mind" beschreibt KI, die Absichten/Emotionen anderer modellieren kann. & $\boxtimes$ & $\square$ \\
-"Self-Aware" (Selbstwahrnehmung) ist heute in typischen Alltagsanwendungen Standard. & $\square$ & $\boxtimes$ \\
+„Limited Memory“ nutzt vergangene Beobachtungen, aber nur in begrenztem Umfang. & $\boxtimes$ & $\square$ \\
+„Theory of Mind“ beschreibt KI, die Absichten/Emotionen anderer modellieren kann. & $\boxtimes$ & $\square$ \\
+„Self-Aware“ (Selbstwahrnehmung) ist heute in typischen Alltagsanwendungen Standard. & $\square$ & $\boxtimes$ \\
 \hline
 \end{tabular}
 
@@ -113,7 +113,7 @@ Der Turing-Test kann auch als reiner Text-Chat durchgeführt werden. & $\boxtime
 Aussage & richtig & falsch \\
 \hline
 Beim Reinforcement Learning lernt man über Belohnung, z.B. Punkte für gefundene Paare. & $\boxtimes$ & $\square$ \\
-Beim Unsupervised Learning sind die Labels ("richtige Antworten") von Anfang an vorgegeben. & $\square$ & $\boxtimes$ \\
+Beim Unsupervised Learning sind die Labels („richtige Antworten“) von Anfang an vorgegeben. & $\square$ & $\boxtimes$ \\
 \hline
 \end{tabular}
 

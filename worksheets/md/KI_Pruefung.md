@@ -114,9 +114,9 @@ Ein lernendes System braucht immer gelabelte Trainingsdaten. & $\square$ & $\squ
 Aussage & richtig & falsch \\
 \hline
 Reaktive KI reagiert nur auf den aktuellen Zustand und speichert keine Vergangenheit. & $\square$ & $\square$ \\
-"Begrenzte Speicherkapazität" nutzt vergangene Beobachtungen. & $\square$ & $\square$ \\
-"Theorie des Geistes" beschreibt KI, die Absichten/Emotionen anderer modellieren kann. & $\square$ & $\square$ \\
-"Selbstwahrnehmung" ist heute in typischen Alltagsanwendungen Standard. & $\square$ & $\square$ \\
+„Begrenzte Speicherkapazität“ nutzt vergangene Beobachtungen. & $\square$ & $\square$ \\
+„Theorie des Geistes“ beschreibt KI, die Absichten/Emotionen anderer modellieren kann. & $\square$ & $\square$ \\
+„Selbstwahrnehmung“ ist heute in typischen Alltagsanwendungen Standard. & $\square$ & $\square$ \\
 \hline
 \end{tabular}
 
@@ -164,7 +164,7 @@ Der Turing-Test kann auch als reiner Text-Chat durchgeführt werden. & $\square$
 Aussage & richtig & falsch \\
 \hline
 Beim Reinforcement Learning lernt man über Belohnung. & $\square$ & $\square$ \\
-Beim Unsupervised Learning sind die Labels ("richtige Antworten") von Anfang an vorgegeben. & $\square$ & $\square$ \\
+Beim Unsupervised Learning sind die Labels („richtige Antworten“) von Anfang an vorgegeben. & $\square$ & $\square$ \\
 \hline
 \end{tabular}
 

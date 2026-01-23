@@ -72,7 +72,7 @@ def generate_sigmoid_svg():
     .legend { font-family: Arial, sans-serif; fill: #222; }
     """
     
-    # Weißer Hintergrund
+    # Weisser Hintergrund
     rect = ET.SubElement(svg, 'rect')
     rect.set('x', '0')
     rect.set('y', '0')

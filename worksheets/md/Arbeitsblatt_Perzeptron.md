@@ -20,7 +20,7 @@ Ich kann
 
 ## 2. Überblick: Aufbau
 
-![Perzeptron Übersicht](resources/perzeptron.svg)
+![Perzeptron Übersicht](../../content/img/perzeptron.svg)
 
 - Bias-Eingang: $x_0 = 1$ ist immer aktiv; $w_0$ wirkt damit als konstanter Offset.
 - Eingänge: $x_1, x_2, \dots$ mit Gewichten $w_1, w_2, \dots$
@@ -147,7 +147,7 @@ Nutze das Flussdiagramm als Leitfaden, um zu verstehen, wie die Gewichte im Perz
     $$
 4. Wiederhole für alle Trainingsbeispiele bis keine Fehler mehr auftreten.
 
-![Perzeptron-Lernregel](resources/perzeptron_lernregel_flussdiagramm.svg)
+![Perzeptron-Lernregel](../../content/img/perzeptron_lernregel_flussdiagramm.svg)
 
 \newpage
 

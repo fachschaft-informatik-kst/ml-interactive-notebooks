@@ -306,7 +306,7 @@ $x$ & $y$ & $z = 1.5x - 2.2$ & $p = \sigma(z)$ & $\hat{y}$ (Schwelle 0.5) \\
 
 **Anwendungsfall:** Ein sehr einfaches Zugangssystem entscheidet: "Zutritt" (1) oder "kein Zutritt" (0). Die Eingaben $x_1$ bis $x_4$ sind vier Sensorwerte zwischen 0 und 1. Die Sensorwerte werden mit Gewichten $w_1$ bis $w_4$ multipliziert und mit einem Bias $w_0$ summiert. Das Ergebnis $z$ wird durch eine Step-Aktivierungsfunktion in die Vorhersage $\hat{y}$ umgewandelt. Es gilt: $\hat{y}=1$ falls $z\ge 0.28$, sonst $\hat{y}=0$. Das Netzwerk ist in der folgenden Abbildung 2 dargestellt:
 
-![Perzeptron mit den Eingaben $x_1$ bis $x_4$ und dem Bias $x_0$](resources/perzeptron_pruefung.svg)
+![Perzeptron mit den Eingaben $x_1$ bis $x_4$ und dem Bias $x_0$](../../content/img/perzeptron_pruefung.svg)
 
 \newpage
 

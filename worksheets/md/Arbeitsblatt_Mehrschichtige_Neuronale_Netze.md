@@ -29,7 +29,7 @@ Ich kann
 
 Ein **mehrschichtiges** Netz besteht aus mehreren Perzeptron-ähnlichen Bausteinen hintereinander. Dadurch kann es **mehrere Regionen** im Koordinatensystem bilden. In der Abbildung 1 sieht man ein einfaches mehrschichtiges Netz mit einer versteckten Schicht. In der versteckten Schicht können mehrere Neuronen jeweils eigene Trennlinien lernen, die zusammen komplexere Entscheidungsgrenzen ermöglichen. In unserem Beispiel sind 2 Neuronen in der versteckten Schicht dargestellt, die jeweils unterschiedliche Trennlinien lernen können. Neben den Eingangsgewichten gibt es auch Bias-Gewichte, die wie ein zusätzlicher fester Eingang „1“ wirken. In der Output-Schicht wird dann aus den Ausgaben der versteckten Schicht eine finale Entscheidung getroffen. Die Aktivierungsfunktion (z.B. Step-Funktion) sorgt dafür, dass das Netz nicht nur lineare Kombinationen lernt, sondern auch komplexere Muster erkennen kann. Die Anzahl Gewichte im Netz hängt von der Anzahl Neuronen und Schichten ab, da jede Verbindung (Kante) im Netz ein eigenes Gewicht hat. Somit erhöht sich die Anzahl der Gwichte von ursprünglich 3 im Perzeptron auf insgesamt 9 (6 in die versteckte Schicht und 3 in die Output-Schicht, inklusive Bias-Gewichte).
 
-![Einfaches mehrschichtiges Netz mit zwei Neuronen in der versteckten Schicht und einem Output-Neuron. Der Bias ist als fester Eingang „1“ dargestellt; jede Kante entspricht einem Gewicht.](resources/merhschichtiges_netzwerk.svg){ width=100% fig-pos="H" }
+![Einfaches mehrschichtiges Netz mit zwei Neuronen in der versteckten Schicht und einem Output-Neuron. Der Bias ist als fester Eingang „1“ dargestellt; jede Kante entspricht einem Gewicht.](../../content/img/merhschichtiges_netzwerk.svg){ width=100% fig-pos="H" }
 
 ### 3.1 Was ist neu gegenüber dem Perzeptron?
 
@@ -95,7 +95,7 @@ Die wichtigste Beobachtung:
 - Mit **nur einem** Perzeptron geht es nicht.
 - Mit **zwei** Neuronen in der versteckten Schicht kann man zwei hilfreiche Zwischenergebnisse bilden.
 
-![Mehrschichtiges Netz mit OR und NAND in Kombination](resources/merhschichtiges_netzwerk_xor.svg){ fig-pos="H" }
+![Mehrschichtiges Netz mit OR und NAND in Kombination](../../content/img/merhschichtiges_netzwerk_xor.svg){ fig-pos="H" }
 
 ### 4.1 Aufgabe: XOR-Tabelle ausfüllen
 

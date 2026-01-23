@@ -36,9 +36,8 @@ header-includes:
 \hline
 \rule[-1.1em]{0pt}{2.2em}\textbf{Gesamt} & \textbf{40} & \\
 \hline
-\rule[-1.1em]{0pt}{2.2em}\textbf{Note} &  & \\
-\hline
 \end{tabular}
+
 
 \end{center}
 ```

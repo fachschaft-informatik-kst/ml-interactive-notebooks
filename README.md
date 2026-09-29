@@ -17,25 +17,46 @@ The advantage of the browser version is that no local setup is required. However
 - `content/klassifikation_ziffern.ipynb`: Klassifikation von handgeschriebenen Ziffern mit Visualisierungen.
 - `content/daten_training.ipynb`: Datenaufbereitung und Trainingsprozess mit interaktiven Elementen.
 
-## Tandemprojekt: Eigene Symbolerkennung
+## Tandemprojekt: Was hat unser Netz gelernt?
 
-- [`content/ki_tandemprojekt.ipynb`](content/ki_tandemprojekt.ipynb): deutschsprachige Projektvorlage für die 4. Gymiklasse. Ein kleines MLP wird vollständig selbst trainiert, ohne vortrainiertes Modell.
-- [`content/symbolstudio.html`](content/symbolstudio.html): eigenständige Zeichenoberfläche für Maus, Stift oder Touch; erzeugt JSON-Dateien mit Personencode, Klasse und 16×16 Pixelwerten. Herunterladen und im Browser öffnen. Auch direkt aus dem Notebook herunterladbar.
+Die Materialien trennen Orientierung, gemeinsames Üben und die eigene Untersuchung:
 
-### Ablauf in JupyterLite / Pyodide
+| Material | Zweck |
+|---|---|
+| [Projektauftrag](content/ki_projektauftrag.md) | Ziel, drei Untersuchungswege, Termine, Abgabe und Bewertung |
+| [Lernlabor](content/ki_lernlabor.ipynb) | 20–30 Minuten Einführung mit synthetischen Daten |
+| [Projektjournal](content/ki_tandemprojekt.ipynb) | Sechs Phasen mit ausfüllbaren Feldern; dient direkt als Abgabe |
+| [Symbolstudio](content/symbolstudio.html) | Lokale Zeichnungserfassung mit JSON-Download |
+| [Vorbereitete Funktionen](content/ki_projekt_tools.py) | Datenprüfung, Training, Diagramme und Export; von beiden Notebooks genutzt |
 
-1. `ki_tandemprojekt.ipynb` in der bestehenden [Browserumgebung](https://fachschaft-informatik-kst.github.io/ml-interactive-notebooks/lab/index.html?path=ki_tandemprojekt.ipynb) öffnen (nach Merge und Deployment verfügbar).
-2. Alle Zellen im voreingestellten **DEMO**-Modus ausführen. Synthetische Beispieldaten sind enthalten; der Abschlusstest bleibt ausgeschaltet.
-3. Vor der Datensammlung eindeutige anonyme Personencodes und getrennte Trainings-, Validierungs- und Testpersonen vereinbaren. Als Klassenpool mindestens acht Personen mit je 12–15 Zeichnungen pro Klasse sammeln.
-4. `symbolstudio.html` lokal öffnen, Symbole zeichnen und die JSON-Dateien herunterladen. Es gibt keine automatische dauerhafte Speicherung in der Zeichenoberfläche.
-5. Im Notebook `MODUS = 'EIGENE_DATEN'`, Klassen und Personencodes einstellen. Kernel neu starten, Start- und Einstellungszellen ausführen, JSON-Dateien im Upload-Widget wählen, dann fortfahren. Alternativ Dateien in JupyterLite hochladen und ihre relativen Namen in `DATEIEN` eintragen.
-6. Variante A (wenige Personen) und B (mehr Personen) erhalten gleich viele Trainingsbilder. Drei vorab festgelegte Läufe, gemeinsame Validierung, Lernkurven, Mehrheitsklassen-Baseline und Fehleranalyse unterstützen den Vergleich.
-7. Auswahl begründen; erst dann `TEST_FREIGEBEN = True` setzen. Nach Testeinsicht nicht weiter optimieren und denselben Test erneut als unabhängig ausgeben.
-8. Notebook mit Ausgaben, ursprüngliche JSON-Dateien und Versuchsprotokoll herunterladen. Browserdaten allein sind keine verlässliche Abgabe-Sicherung.
+**Die sechs Phasen:** Anwendung → Daten → Ausgangsmodell → Untersuchung → Abschlusstest → Urteil. Jede Phase enthält Frage, Vermutung, Experiment, Beleg und Schlussfolgerung. Ein kontrollierter Vergleich ist Pflicht:
 
-Die Startzelle lädt NumPy, SciPy, scikit-learn und Matplotlib explizit über Pyodide. Das vorhandene ipywidgets-Setup wird verwendet. Keine neuen Projektabhängigkeiten, kein TensorFlow, keine GPU und kein Server-Backend erforderlich. Beim ersten Start braucht die Laufzeit Netzwerkzugriff für Pakete; Zeichnungen werden lokal verarbeitet. Browser-Downloadlinks bieten die Dateien direkt an.
+- **Menge:** 12 gegen 48 Trainingsbilder je Klasse; kleiner Datensatz ist Teilmenge des grossen, gleicher Personenpool und gleiches Netz.
+- **Vielfalt:** Zwei gegen vier zeichnende Personen bei gleicher Gesamtbildzahl und gleichem Netz.
+- **Netz:** 8 gegen 48 versteckte Neuronen mit exakt denselben Trainingsbildern je Lauf.
 
-**Didaktischer Umfang:** ca. drei Doppellektionen mit vorbereitetem Klassen-Datenpool. Die Tandems ergänzen Frage, Vermutung, Versuchsplan, Beobachtungen und Urteil. Bewertet werden methodisches Vorgehen und Verständnis, nicht die höchste Trefferquote. Die Auswahl der Personen ist fest; Seed-Wiederholungen allein beweisen keine Übertragbarkeit auf eine Population.
+### In JupyterLite / Pyodide starten
+
+Nach Merge und Deployment: [Lernlabor öffnen](https://fachschaft-informatik-kst.github.io/ml-interactive-notebooks/lab/index.html?path=ki_lernlabor.ipynb) → [Projektjournal öffnen](https://fachschaft-informatik-kst.github.io/ml-interactive-notebooks/lab/index.html?path=ki_tandemprojekt.ipynb).
+
+1. Notebook, `ki_projekt_tools.py` und `symbolstudio.html` im gleichen Ordner belassen. Der bestehende Build übernimmt alle Dateien aus `content/`.
+2. Im **DEMO**-Modus von oben nach unten ausführen; synthetische Daten dienen nur zum Kennenlernen.
+3. Vor Projektbeginn gemeinsam mindestens acht Personen mit je 12–15 Zeichnungen pro Klasse sammeln. Eindeutige anonyme Codes verwenden; vier Trainings-, zwei Validierungs- und zwei Testpersonen festlegen.
+4. Symbolstudio herunterladen und im Browser öffnen. Die JSON-Dateien selbst herunterladen; Zeichnungen sind bis dahin nur im Arbeitsspeicher.
+5. Im Journal `EIGENE_DATEN`, Klassen und Codes wählen, Kernel neu starten, bis zum Upload ausführen. Erst JSON-Dateien auswählen, danach die Datenzelle ausführen. Alternativ Dateien in den JupyterLite-Dateibrowser laden und relative Namen in `DATEIEN` eintragen.
+6. Ausgangsmodell anschauen, Versuchsplan ausfüllen und genau einen Untersuchungsweg trainieren. Drei vorher festgelegte Läufe gemeinsam auswerten. Weitere Untersuchungen getrennt dokumentieren.
+7. Auswahl mit der Lehrperson begründen, dann Abschlusstest explizit freigeben. Die bereits trainierten Modelle werden geprüft; danach nicht weiter auf diesen Test optimieren.
+8. Journal mit Ausgaben, Original-JSONs und Protokoll extern sichern. Das Journal ersetzt eine zusätzliche lange Dokumentation.
+
+Die Startzellen laden NumPy, SciPy, scikit-learn und Matplotlib über Pyodide; ipywidgets wird aus dem bestehenden Setup verwendet. Keine zusätzlichen Projektabhängigkeiten, kein TensorFlow, keine GPU und kein Daten-Backend. Netzwerkzugriff wird beim ersten Start für Laufzeitpakete benötigt. Die Datenverarbeitung erfolgt lokal. Die Testsperre unterstützt eine Arbeitsregel, ist aber kein Sicherheitsmechanismus.
+
+### Für die Lehrperson
+
+Datenpool ab 08.12. organisieren. Am 15.12. Anwendung, Daten und Ausgangsmodell; am 05.01. kontrollierter Vergleich; am 12.01. Abschlusstest und Urteil. Fachgespräche ab 19.01. gemäss separatem Terminplan, mit einem gleichen Abgabestand für alle. Bewertet werden methodisches Vorgehen und Verständnis, nicht die höchste Accuracy. Wenige Testpersonen und drei Seeds begrenzen die Aussagekraft.
+
+### Überprüfung
+
+`python tests/check_ki_projekt.py` prüft die Vergleichsbedingungen, Datenaufteilung, JSON-Import und Testsperre mit synthetischen Daten. Benötigt die bestehenden wissenschaftlichen Pakete und ipywidgets. Die komplette Notebook-Ausführung wird zusätzlich vor Auslieferung in Pyodide geprüft. Frontend-Klicktests auf Schulgeräten bleiben wichtig, insbesondere für Upload und Download.
 
 ## Worksheets (PDF)
 

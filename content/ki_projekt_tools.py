@@ -20,7 +20,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from IPython.display import HTML, display
 import ipywidgets as widgets
 
-VERSION = '2.0'
+VERSION = '3.0'
 
 
 def pruefe(bedingung, meldung):
@@ -131,15 +131,22 @@ def daten_ansehen(d):
         for ax in axes[c]:
             ax.axis('off')
         for ax, i in zip(axes[c], ids):
-            ax.imshow(d.X[i].reshape(16, 16), cmap='gray_r', vmin=0, vmax=1)
+            _bild_zeigen(ax, d, i)
             ax.set_title(f'{label} · {d.personen[i]}', fontsize=9)
     fig.suptitle('Trainingsdaten' + (' · künstliche DEMO' if d.modus == 'DEMO' else ''))
     plt.tight_layout(); plt.show()
 
 
-def netz_zeigen(neuronen, klassen):
+def _bild_zeigen(ax, d, i):
+    if hasattr(d, 'bilder'):
+        ax.imshow(d.bilder[i])
+    else:
+        ax.imshow(d.X[i].reshape(16, 16), cmap='gray_r', vmin=0, vmax=1)
+
+
+def netz_zeigen(neuronen, klassen, eingaben=256):
     fig, ax = plt.subplots(figsize=(8, 2.5))
-    for x, title, text in [(0.15, 'Eingabe', '256 Pixelwerte'), (.5, 'Versteckte Schicht', f'{neuronen} Neuronen · ReLU'), (.85, 'Ausgabe', f'{len(klassen)} Klassen')]:
+    for x, title, text in [(0.15, 'Eingabe', f'{eingaben} Eingabewerte'), (.5, 'Versteckte Schicht', f'{neuronen} Neuronen · ReLU'), (.85, 'Ausgabe', f'{len(klassen)} Klassen')]:
         ax.text(x, .65, title, ha='center', weight='bold', transform=ax.transAxes)
         ax.text(x, .4, text, ha='center', transform=ax.transAxes,
                 bbox=dict(boxstyle='round,pad=.7', facecolor='#eaf1f8', edgecolor='#30628c'))
@@ -147,11 +154,11 @@ def netz_zeigen(neuronen, klassen):
         ax.annotate('', xy=(b,.42), xytext=(a,.42), xycoords='axes fraction',
                     arrowprops=dict(arrowstyle='->', color='#30628c', lw=2))
     ax.axis('off');plt.tight_layout();plt.show()
-    print((256+1)*neuronen+(neuronen+1)*len(klassen), 'trainierbare Gewichte und Biaswerte.')
+    print((eingaben+1)*neuronen+(neuronen+1)*(1 if len(klassen)==2 else len(klassen)), 'trainierbare Gewichte und Biaswerte.')
 
 
 def _auswahl(d, personen, anzahl, seed):
-    pruefe(anzahl > 0 and anzahl % len(personen) == 0, 'Bildanzahl pro Klasse muss durch die Personenzahl teilbar sein.')
+    pruefe(anzahl > 0 and anzahl % len(personen) == 0, 'Bildanzahl pro Klasse muss durch die Gruppenzahl teilbar sein.')
     rng = np.random.default_rng(seed)
     ids = []
     for p in personen:
@@ -186,7 +193,7 @@ def experiment_starten(d, weg='vielfalt', bilder_pro_klasse=24, neuronen=24,
     pruefe(len(seeds) >= (1 if weg == 'ausgang' else 3) and len(set(seeds)) == len(seeds), 'Mindestens drei verschiedene, vorher festgelegte Seeds verwenden.')
     few = tuple(wenige_personen or d.train_personen[:2])
     if weg == 'vielfalt':
-        pruefe(len(set(few)) == len(few) and len(few) >= 2 and set(few) < set(d.train_personen), 'Wenige Personen: mindestens zwei, echte Teilmenge der Trainingspersonen.')
+        pruefe(len(set(few)) == len(few) and len(few) >= 2 and set(few) < set(d.train_personen), 'Wenige Datengruppen: mindestens zwei, echte Teilmenge der Trainingsgruppen.')
     if weg == 'menge':
         pruefe(len(mengen) == 2 and 0 < mengen[0] < mengen[1], 'Zwei aufsteigende Bildmengen wählen.')
         variants = [('A', d.train_personen, mengen[0], neuronen), ('B', d.train_personen, mengen[1], neuronen)]
@@ -219,7 +226,7 @@ def ausgangsmodell(d):
 def ergebnisse_zeigen(exp):
     d = exp['daten'];runs=exp['laeufe']
     names = list(dict.fromkeys(r['variante'] for r in runs))
-    print(d.modus, '·', exp['einstellungen']['weg'], '· Validierung:', len(d.val), 'Bilder /', len(d.val_personen), 'Personen')
+    print(d.modus, '·', exp['einstellungen']['weg'], '· Validierung:', len(d.val), 'Bilder /', len(d.val_personen), 'Datengruppen')
     print('Variante | Lauf | Trainingsbilder | Training | Validierung')
     for r in runs:
         print(f'{r["variante"]} | {r["seed"]} | {len(r["ids"])} | {r["train"]:.1%} | {r["val"]:.1%}')
@@ -261,7 +268,7 @@ def fehler_zeigen(exp, variante='A'):
     fig,axes=plt.subplots(1,len(wrong),figsize=(2.4*len(wrong),2.8),squeeze=False)
     for ax,i in zip(axes[0],wrong):
         probs=model.predict_proba(d.X[i:i+1])[0];guess=int(np.argmax(probs))
-        ax.imshow(d.X[i].reshape(16,16),cmap='gray_r',vmin=0,vmax=1)
+        _bild_zeigen(ax, d, i)
         ax.set_title(f'Wahr: {d.klassen[d.y[i]]}\nNetz: {d.klassen[guess]}\nModellwert: {probs[guess]:.0%}',fontsize=9);ax.axis('off')
     plt.tight_layout();plt.show()
 
@@ -283,7 +290,7 @@ def abschlusstest(exp, variante='B', begruendung='', freigabe=False):
     result=dict(variante=variante, begruendung=begruendung, scores=scores, mittelwert=float(np.mean(scores)),
                 n_bilder=len(d.test), personen=list(d.test_personen))
     exp['test']=result;d.test_verwendet=True
-    print(d.modus,'· Abschlusstest:',len(d.test),'Bilder von',len(d.test_personen),'Personen')
+    print(d.modus,'· Abschlusstest:',len(d.test),'Bilder von',len(d.test_personen),'Datengruppen')
     for r,s in zip(runs,scores):print(f'Lauf {r["seed"]}: {s:.1%}')
     print(f'Mittelwert: {np.mean(scores):.1%}; Spanne: {min(scores):.1%}–{max(scores):.1%}')
     fig,ax=plt.subplots(figsize=(6,5))
@@ -298,6 +305,7 @@ def protokoll(exp, export=True):
     d=exp['daten']
     result=dict(tool_version=VERSION, numpy=np.__version__, sklearn=sklearn.__version__,
                 modus=d.modus, klassen=d.klassen, daten_sha256=d.checksum,
+                vorverarbeitung=copy.deepcopy(getattr(d, 'provenienz', {'pipeline':'symbolstudio-v1'})),
                 einstellungen=copy.deepcopy(exp['einstellungen']),
                 gruppen=dict(train=list(d.train_personen),val=list(d.val_personen),test=list(d.test_personen)),
                 validierung_ids=[d.ids[i] for i in d.val], test_ids=[d.ids[i] for i in d.test],
